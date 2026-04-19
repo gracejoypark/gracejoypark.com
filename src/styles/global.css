@@ -1,0 +1,92 @@
+:root {
+  --ink: #1a1a1a;
+  --paper: #fdfcf8;
+  --muted: #6b6b6b;
+  --rule: #e6e2d8;
+  --accent: #5a3a2a;
+  --max-width: 1100px;
+  --gutter: 2rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-family: "Times New Roman", Times, serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 18px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 4rem var(--gutter) 6rem;
+}
+
+h1, h2, h3 {
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+h1 {
+  font-style: italic;
+  font-size: 2.4rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--rule);
+  text-underline-offset: 3px;
+  transition: color 0.15s, text-decoration-color 0.15s;
+}
+
+a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 2.5rem 0;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+@media (max-width: 640px) {
+  html { font-size: 17px; }
+  main { padding: 2.5rem 1.25rem 4rem; }
+  h1 { font-size: 2rem; }
+}

@@ -1,0 +1,95 @@
+---
+import Base from "../layouts/Base.astro";
+
+const pieces = [
+  {
+    title: "Sample article title",
+    publication: "The Red & Black",
+    date: "2025",
+    href: "#",
+    summary: "A short cutline or one-sentence description of the piece.",
+  },
+  {
+    title: "Another piece",
+    publication: "Publication name",
+    date: "2025",
+    href: "#",
+    summary: "A short cutline or one-sentence description of the piece.",
+  },
+  {
+    title: "A photo essay",
+    publication: "Publication name",
+    date: "2024",
+    href: "#",
+    summary: "A short cutline or one-sentence description of the piece.",
+  },
+];
+---
+
+<Base title="Work — Grace Joy Park">
+  <h1>Work</h1>
+  <p class="muted lead">Selected journalism, photography, and writing.</p>
+
+  <ul class="pieces">
+    {pieces.map((p) => (
+      <li>
+        <a href={p.href} class="piece">
+          <div class="meta">
+            <span class="pub">{p.publication}</span>
+            <span class="dot">·</span>
+            <span class="date">{p.date}</span>
+          </div>
+          <div class="title">{p.title}</div>
+          <p class="summary">{p.summary}</p>
+        </a>
+      </li>
+    ))}
+  </ul>
+</Base>
+
+<style>
+  .lead { margin-bottom: 2.5rem; }
+
+  .pieces {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pieces li {
+    border-top: 1px solid var(--rule);
+  }
+  .pieces li:last-child { border-bottom: 1px solid var(--rule); }
+
+  .piece {
+    display: block;
+    padding: 1.5rem 0;
+    text-decoration: none;
+    color: var(--ink);
+  }
+
+  .piece:hover .title { color: var(--accent); }
+
+  .meta {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .dot { margin: 0 0.4rem; }
+
+  .title {
+    font-size: 1.4rem;
+    font-style: italic;
+    margin-bottom: 0.4rem;
+  }
+
+  .summary {
+    color: var(--muted);
+    margin: 0;
+    max-width: 60ch;
+  }
+</style>

@@ -1,0 +1,51 @@
+---
+const socials = [
+  { href: "mailto:qgrace2006@gmail.com", label: "Email" },
+  { href: "https://www.linkedin.com/in/", label: "LinkedIn" },
+  { href: "https://www.instagram.com/", label: "Instagram" },
+];
+---
+
+<footer class="site-footer">
+  <div class="inner">
+    <span class="muted">© {new Date().getFullYear()} Grace Joy Park</span>
+    <ul>
+      {socials.map(({ href, label }) => (
+        <li><a href={href}>{label}</a></li>
+      ))}
+    </ul>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid var(--rule);
+    margin-top: auto;
+  }
+
+  .inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1.5rem var(--gutter);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 0.95rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 640px) {
+    .inner {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1.5rem 1.25rem;
+    }
+  }
+</style>

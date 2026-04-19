@@ -1,0 +1,76 @@
+---
+const { pathname } = Astro.url;
+const isActive = (href: string) =>
+  href === "/" ? pathname === "/" : pathname.startsWith(href);
+
+const links = [
+  { href: "/about", label: "About" },
+  { href: "/work", label: "Work" },
+  { href: "/resume", label: "Resume" },
+  { href: "/contact", label: "Contact" },
+];
+---
+
+<header class="site-header">
+  <a href="/" class="wordmark">Grace Joy Park</a>
+  <nav>
+    <ul>
+      {links.map(({ href, label }) => (
+        <li>
+          <a href={href} class={isActive(href) ? "active" : ""}>{label}</a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>
+
+<style>
+  .site-header {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2rem var(--gutter) 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .wordmark {
+    font-style: italic;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--ink);
+  }
+
+  .wordmark:hover {
+    color: var(--accent);
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1.75rem;
+  }
+
+  nav a {
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  nav a.active {
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-underline-offset: 5px;
+  }
+
+  @media (max-width: 640px) {
+    .site-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.5rem 1.25rem 0.5rem;
+    }
+    nav ul { gap: 1.25rem; flex-wrap: wrap; }
+  }
+</style>
