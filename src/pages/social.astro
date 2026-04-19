@@ -1,0 +1,44 @@
+---
+import Base from "../layouts/Base.astro";
+
+const instagramPosts = [
+  "https://www.instagram.com/p/REPLACE_WITH_POST_ID/",
+  "https://www.instagram.com/p/REPLACE_WITH_POST_ID/",
+  "https://www.instagram.com/p/REPLACE_WITH_POST_ID/",
+];
+---
+
+<Base title="Social — Grace Joy Park">
+  <h1>Social</h1>
+  <p class="muted lead">A few favorite posts from Instagram.</p>
+
+  <div class="grid">
+    {instagramPosts.map((url) => (
+      <blockquote
+        class="instagram-media"
+        data-instgrm-permalink={url}
+        data-instgrm-version="14"
+      ></blockquote>
+    ))}
+  </div>
+
+  <script async src="https://www.instagram.com/embed.js"></script>
+</Base>
+
+<style>
+  .lead { margin-bottom: 2.5rem; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  /* Instagram's embed sets its own min/max width; nudge it to behave inside the grid. */
+  .grid :global(.instagram-media) {
+    min-width: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+</style>
