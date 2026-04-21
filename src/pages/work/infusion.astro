@@ -1,0 +1,98 @@
+---
+import Base from "../../layouts/Base.astro";
+import { Image } from "astro:assets";
+import cover from "../../assets/work/infusion/DSC00205.png";
+import staff from "../../assets/work/infusion/DSC00208.png";
+import defiantFashion from "../../assets/work/infusion/DSC00210.png";
+import colorism from "../../assets/work/infusion/DSC00211.png";
+import creativeWriting from "../../assets/work/infusion/DSC00212.png";
+
+const photos = [
+  { src: cover, caption: "Infusion Magazine, Vol. 23 Issue 1 — cover." },
+  { src: staff, caption: "Staff page listing — Fashion & Beauty Editor." },
+  { src: defiantFashion, caption: "\u201CDefiant Fashion\u201D feature spread." },
+  { src: colorism, caption: "\u201CFair Is Not The Only Lovely: Colorism in the South Asian Community\u201D spread." },
+  { src: creativeWriting, caption: "Creative Writing section opener spread." },
+];
+---
+
+<Base title="Infusion Magazine — Grace Joy Park" description="Grace Joy Park's section editor work on Infusion Magazine, Vol. 23 Issue 1 (Fall 2025).">
+  <p class="back"><a href="/work">&larr; Back to Work</a></p>
+  <h1>Infusion Magazine</h1>
+  <p class="meta muted">Vol. 23 Issue 1 &middot; Fall 2025</p>
+
+  <div class="prose">
+    <p>
+      I served as Section Editor for the Fashion and Beauty vertical in
+      Infusion Magazine's Fall 2025 issue. I led content strategy for the
+      section, edited two major drafts per piece to keep the writing on
+      AP Style and on brand, and helped shape the issue's broader themes
+      of social awareness and digital culture alongside the editorial
+      board.
+    </p>
+  </div>
+
+  <section class="photos">
+    {photos.map((p) => (
+      <figure class="item">
+        <Image
+          src={p.src}
+          alt={p.caption}
+          widths={[600, 900, 1200, 1600]}
+          sizes="(max-width: 720px) 100vw, 900px"
+          format="webp"
+          loading="lazy"
+        />
+        <figcaption>{p.caption}</figcaption>
+      </figure>
+    ))}
+  </section>
+</Base>
+
+<style>
+  .back { margin-bottom: 1rem; font-size: 0.95rem; }
+
+  .meta {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2rem;
+  }
+
+  .prose p {
+    max-width: 60ch;
+    margin-bottom: 2rem;
+  }
+
+  .photos {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    align-items: center;
+  }
+
+  .item {
+    margin: 0;
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .item :global(img) {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    /* transparent-background PNGs blend with cream paper; no border */
+  }
+
+  figcaption {
+    margin-top: 0.75rem;
+    font-size: 0.95rem;
+    color: var(--muted);
+    font-style: italic;
+    text-align: center;
+    max-width: 60ch;
+  }
+</style>
