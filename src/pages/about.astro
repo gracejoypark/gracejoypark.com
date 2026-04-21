@@ -1,13 +1,18 @@
 ---
 import Base from "../layouts/Base.astro";
+import { Image } from "astro:assets";
+import businessBeat from "../assets/gallery/business-beat.jpg";
+import interview from "../assets/gallery/interview.jpg";
+import grady from "../assets/gallery/grady.jpg";
+import friends from "../assets/gallery/friends.jpg";
 
-// Drop your photos in `public/gallery/` and list their paths here.
-// Add a caption to each — it shows under the image and is used as alt text.
+// Drop new photos in `src/assets/gallery/`, import them above, and list them here.
+// Astro auto-compresses, converts to WebP, and serves responsive sizes at build time.
 const gallery = [
-  { src: "/gallery/business-beat.jpg", caption: "Presenting my Business Beat story on SCLPT Studio" },
-  { src: "/gallery/interview.jpg", caption: "Interviewing for beat Q&A story" },
-  { src: "/gallery/grady.jpg", caption: "Grady College, UGA" },
-  { src: "/gallery/friends.jpg", caption: "With group members for Dog with the Dean coverage" },
+  { src: businessBeat, caption: "Presenting my Business Beat story on SCLPT Studio" },
+  { src: interview, caption: "Interviewing for beat Q&A story" },
+  { src: grady, caption: "Grady College, UGA" },
+  { src: friends, caption: "With group members for Dog with the Dean coverage" },
 ];
 ---
 
@@ -44,7 +49,7 @@ const gallery = [
     <div class="gallery" role="list">
       {gallery.map((g) => (
         <figure class="item" role="listitem">
-          <img src={g.src} alt={g.caption} loading="lazy" />
+          <Image src={g.src} alt={g.caption} height={680} loading="lazy" />
           <figcaption>{g.caption}</figcaption>
         </figure>
       ))}
@@ -109,9 +114,6 @@ const gallery = [
     border: 1px solid var(--rule);
   }
 
-  .item figcaption {
-    max-width: 40ch;
-  }
 
   .item figcaption {
     margin-top: 0.5rem;
