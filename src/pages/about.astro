@@ -1,6 +1,7 @@
 ---
 import Base from "../layouts/Base.astro";
 import { Image } from "astro:assets";
+import portrait from "../assets/portrait.jpg";
 import businessBeat from "../assets/gallery/business-beat.jpg";
 import interview from "../assets/gallery/interview.jpg";
 import grady from "../assets/gallery/grady.jpg";
@@ -20,9 +21,7 @@ const gallery = [
   <h1>About</h1>
   <div class="grid">
     <div class="image">
-      <div class="placeholder">
-        <span>Your photo here</span>
-      </div>
+      <Image src={portrait} alt="Grace Joy Park" widths={[400, 600, 900]} sizes="(max-width: 720px) 90vw, 40vw" />
     </div>
     <div class="prose">
       <p>
@@ -69,16 +68,14 @@ const gallery = [
     aspect-ratio: 4 / 5;
     border: 1px solid var(--rule);
     background: #f3efe6;
+    overflow: hidden;
   }
 
-  .placeholder {
+  .image :global(img) {
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--muted);
-    font-style: italic;
+    object-fit: cover;
+    display: block;
   }
 
   .prose p { max-width: 60ch; }
