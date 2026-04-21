@@ -1,5 +1,7 @@
 ---
 import Base from "../layouts/Base.astro";
+import { Image } from "astro:assets";
+import cutline from "../assets/work/cutline.jpg";
 
 const pieces = [
   {
@@ -34,8 +36,8 @@ const pieces = [
     title: "Photo: \u201CICE Out of Athens\u201D rally",
     publication: "Reporting I, Grady College",
     date: "January 2026",
-    href: "/work/cutline.jpg",
-    summary: "First photography and made a cutline.",
+    image: cutline,
+    summary: "Created a cutline on ICE protests.",
   },
 ];
 ---
@@ -45,9 +47,9 @@ const pieces = [
   <p class="muted lead">Selected journalism, photography, and writing.</p>
 
   <ul class="pieces">
-    {pieces.map((p) => (
-      <li>
-        <a href={p.href} class="piece">
+    {pieces.map((p) => {
+      const Inner = (
+        <>
           <div class="meta">
             <span class="pub">{p.publication}</span>
             <span class="dot">·</span>
@@ -55,9 +57,27 @@ const pieces = [
           </div>
           <div class="title">{p.title}</div>
           <p class="summary">{p.summary}</p>
-        </a>
-      </li>
-    ))}
+          {p.image && (
+            <Image
+              src={p.image}
+              alt={p.title}
+              widths={[600, 900, 1200]}
+              sizes="(max-width: 720px) 100vw, 900px"
+              class="photo"
+            />
+          )}
+        </>
+      );
+      return (
+        <li>
+          {p.href ? (
+            <a href={p.href} class="piece">{Inner}</a>
+          ) : (
+            <div class="piece piece--static">{Inner}</div>
+          )}
+        </li>
+      );
+    })}
   </ul>
 </Base>
 
@@ -84,6 +104,7 @@ const pieces = [
   }
 
   .piece:hover .title { color: var(--accent); }
+  .piece--static:hover .title { color: inherit; }
 
   .meta {
     font-size: 0.85rem;
@@ -104,5 +125,13 @@ const pieces = [
   .summary {
     color: var(--muted);
     margin: 0;
+  }
+
+  .piece :global(.photo) {
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border: 1px solid var(--rule);
   }
 </style>
