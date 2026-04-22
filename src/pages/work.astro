@@ -38,6 +38,7 @@ const pieces = [
     date: "January 2026",
     image: cutline,
     summary: "Created a cutline on ICE protests.",
+    caption: "University of Georgia students rally against U.S. Immigration and Customs Enforcement at the Tate Student Center on Friday, Jan. 30, 2026. Protestors call for action to remove the agency from Athens. (Photo/Grace Park)",
   },
   {
     title: "Section Editor \u2014 Fashion & Beauty",
@@ -65,13 +66,16 @@ const pieces = [
           <div class="title">{p.title}</div>
           <p class="summary">{p.summary}</p>
           {p.image && (
-            <Image
-              src={p.image}
-              alt={p.title}
-              widths={[600, 900, 1200]}
-              sizes="(max-width: 720px) 100vw, 900px"
-              class="photo"
-            />
+            <figure class="photo-figure">
+              <Image
+                src={p.image}
+                alt={p.title}
+                widths={[600, 900, 1200]}
+                sizes="(max-width: 720px) 100vw, 900px"
+                class="photo"
+              />
+              {p.caption && <figcaption>{p.caption}</figcaption>}
+            </figure>
           )}
         </>
       );
@@ -134,12 +138,24 @@ const pieces = [
     margin: 0;
   }
 
+  .piece :global(.photo-figure) {
+    margin: 1rem auto 0;
+    max-width: 900px;
+  }
+
   .piece :global(.photo) {
     display: block;
-    margin: 1rem auto 0;
     width: 100%;
     max-width: 900px;
     height: auto;
     border: 1px solid var(--rule);
+  }
+
+  .piece :global(.photo-figure figcaption) {
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+    font-style: italic;
+    line-height: 1.5;
   }
 </style>
