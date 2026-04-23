@@ -1,8 +1,8 @@
 ---
 const socials = [
-  { href: "mailto:grace@gracejoypark.com", label: "Email" },
-  { href: "https://www.linkedin.com/in/grace-park-683434294/", label: "LinkedIn" },
-  { href: "https://www.instagram.com/grace.park_reporting/", label: "Instagram" },
+  { href: "mailto:grace@gracejoypark.com", label: "Email", external: false },
+  { href: "https://www.linkedin.com/in/grace-park-683434294/", label: "LinkedIn", external: true },
+  { href: "https://www.instagram.com/grace.park_reporting/", label: "Instagram", external: true },
 ];
 ---
 
@@ -10,8 +10,13 @@ const socials = [
   <div class="inner">
     <span class="muted">© {new Date().getFullYear()} Grace Joy Park</span>
     <ul>
-      {socials.map(({ href, label }) => (
-        <li><a href={href}>{label}</a></li>
+      {socials.map(({ href, label, external }) => (
+        <li>
+          <a
+            href={href}
+            {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+          >{label}</a>
+        </li>
       ))}
     </ul>
   </div>
