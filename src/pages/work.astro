@@ -10,6 +10,7 @@ const pieces = [
     date: "April 2026",
     href: "/work/twilight-criterium.pdf",
     summary: "A former Twilight racer returned to scout the downtown Athens course as vendors and musicians prepared for the 46th Athens Orthopedic Clinic Twilight Criterium.",
+    why: "Twilight pulls thousands of people into downtown Athens each spring, so even the day-before scene mattered to readers planning around the closures and the food court. Writing the vignette taught me to build a story in real time: pick one source whose presence answers \u201Cwhy come back?\u201D and use observation around them to set the scene without padding.",
   },
   {
     title: "SCLPT Studio brings boutique wellness to Athens",
@@ -17,6 +18,7 @@ const pieces = [
     date: "March 2026",
     href: "/work/sclpt-studio.pdf",
     summary: "Co-founders Alexis Cason and Genna Ringler opened a boutique fitness studio combining reformer Pilates and hot mat sculpt classes, and hit maximum capacity within a year.",
+    why: "A boutique studio hitting max capacity in its first year is a real Athens business story, especially one led by two young women in a college town that doesn\u2019t track that kind of growth. Reporting it pushed me to interview two co-founders at once, hold a profit-versus-mission thread, and let their philosophy on mental health do the work instead of leaning on adjectives. It also strengthened my business beat by giving me a recurring source set I can return to as the studio scales.",
   },
   {
     title: "Athens-Clarke County Commission Extends Delay on Data Center Moratorium",
@@ -24,6 +26,7 @@ const pieces = [
     date: "March 2026",
     href: "/work/data-center-moratorium.pdf",
     summary: "Athens-Clarke County commissioners voted to extend the temporary pause on new data centers through June 5 after residents raised concerns about utility costs, water use, and power demand.",
+    why: "The commission\u2019s vote to extend the moratorium through June 5 was the last window for residents to push back before any new data center proposals can move, which is why the room was full of people raising utility, water and environmental-justice concerns. Covering the meeting taught me to track a vote alongside several threads of public comment and condense a long agenda into a clean lede with the stakes on top. It also pointed me to follow-up sources like Commissioner Ovita Thornton and resident Olivia Asher, who I can return to before the deadline.",
   },
   {
     title: "Q&A: Cayce Reese on Intersection of Community Banking, Storytelling",
@@ -31,6 +34,7 @@ const pieces = [
     date: "February 2026",
     href: "/work/cayce-reese-qa.pdf",
     summary: "Cayce Reese, marketing and business development coordinator for Oconee State Bank, on community storytelling, financial honesty, and how local banks stay competitive in a digital age.",
+    why: "Community banking sounds dry until you talk to someone like Cayce Reese, who frames money as a story about integrity and \u201Cpreplanned spontaneity.\u201D The Q&A format let her advice on financial honesty stand on its own without me narrating over it, which is a skill I wanted more reps on. It also deepened my business beat by opening Oconee State Bank as a recurring source for small-business stories.",
   },
   {
     title: "Photo: \u201CICE Out of Athens\u201D rally",
@@ -39,6 +43,7 @@ const pieces = [
     image: cutline,
     summary: "Created a cutline on ICE protests.",
     caption: "University of Georgia students rally against U.S. Immigration and Customs Enforcement at the Tate Student Center on Friday, Jan. 30, 2026. Protestors call for action to remove the agency from Athens. (Photo/Grace Park)",
+    why: "The \u201CICE Out of Athens\u201D rally was the first time many UGA students used the Tate Student Center steps to push back on federal immigration enforcement in the city, so even a single photo and cutline carried news value. Working only in photo and cutline form pushed me to be precise: the caption has to do the reporting in a few sentences, with names, date, location and stakes, and no room to bury the lede.",
   },
   {
     title: "Section Editor: Fashion & Beauty",
@@ -46,6 +51,7 @@ const pieces = [
     date: "Fall 2025",
     href: "/work/infusion",
     summary: "Edited the Fashion and Beauty vertical for Infusion Magazine's Fall 2025 issue. Led content strategy, edited drafts, and shaped the section's voice.",
+    why: "Editing the Fashion and Beauty vertical for Infusion\u2019s Fall 2025 issue meant shaping how a student magazine covered topics like colorism in the South Asian community and \u201Cdefiant\u201D fashion, pieces that needed a steady hand on AP Style and a careful eye on tone. The work sharpened skills I don\u2019t get in a reporting class: assigning stories, line-editing two drafts per piece, and arguing for cohesion across an issue alongside the editorial board.",
   },
 ];
 ---
@@ -85,6 +91,12 @@ const pieces = [
             <a href={p.href} class="piece">{Inner}</a>
           ) : (
             <div class="piece piece--static">{Inner}</div>
+          )}
+          {p.why && (
+            <div class="why">
+              <span class="why-label">Why I wrote it</span>
+              <p>{p.why}</p>
+            </div>
           )}
         </li>
       );
@@ -157,5 +169,25 @@ const pieces = [
     color: var(--muted);
     font-style: italic;
     line-height: 1.5;
+  }
+
+  .why {
+    padding: 0 0 1.5rem;
+    max-width: 65ch;
+  }
+
+  .why-label {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin-bottom: 0.4rem;
+  }
+
+  .why p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
 </style>

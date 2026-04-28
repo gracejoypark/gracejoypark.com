@@ -32,6 +32,19 @@ const photos = [
     </p>
   </div>
 
+  <section class="why-section">
+    <h2>Why I Wrote It</h2>
+    <p>
+      Editing the Fashion and Beauty vertical for Infusion's Fall 2025 issue
+      meant shaping how a student magazine covered topics like colorism in the
+      South Asian community and "defiant" fashion, pieces that needed a steady
+      hand on AP Style and a careful eye on tone. The work sharpened skills I
+      don't get in a reporting class: assigning stories, line-editing two
+      drafts per piece, and arguing for cohesion across an issue alongside the
+      editorial board.
+    </p>
+  </section>
+
   <section class="photos">
     {photos.map((p) => (
       <figure class="item">
@@ -94,5 +107,22 @@ const photos = [
     font-style: italic;
     text-align: center;
     max-width: 60ch;
+  }
+
+  .why-section {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
+    max-width: 65ch;
+  }
+
+  .why-section h2 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .why-section p {
+    margin: 0;
+    line-height: 1.6;
   }
 </style>
