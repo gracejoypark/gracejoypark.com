@@ -6,25 +6,22 @@ import portrait from "../assets/gallery/interview.jpg";
 
 <Base>
   <section class="hero">
-    <div class="left">
-      <p class="skills-line">I report, photograph and edit stories about Athens.</p>
-      <div class="portrait">
-        <Image src={portrait} alt="Grace Joy Park interviewing for a beat Q&A story" widths={[400, 600, 900]} sizes="(max-width: 720px) 90vw, 40vw" />
-      </div>
+    <div class="portrait">
+      <Image src={portrait} alt="Grace Joy Park interviewing for a beat Q&A story" widths={[400, 600, 900]} sizes="(max-width: 720px) 90vw, 40vw" />
     </div>
     <div class="intro">
       <h1>Grace Joy Park</h1>
       <p class="muted">Multimedia journalist and aspiring advertising copywriter.</p>
       <p>
-        This site collects clips from my time at the University of Georgia,
-        projects in progress, and what's coming next.
+        I report, photograph, and edit stories about the people and places
+        around Athens. This site collects clips from my time at the University
+        of Georgia, projects in progress, and what's coming next.
       </p>
       <p>
         <a href="/about">More about me &rarr;</a>
       </p>
     </div>
   </section>
-
 </Base>
 
 <style>
@@ -34,20 +31,6 @@ import portrait from "../assets/gallery/interview.jpg";
     gap: 3rem;
     align-items: center;
     margin-top: 1rem;
-  }
-
-  .left {
-    display: flex;
-    flex-direction: column;
-    gap: 0.9rem;
-  }
-
-  .skills-line {
-    font-style: italic;
-    font-size: 1.05rem;
-    color: var(--ink);
-    margin: 0;
-    max-width: 38ch;
   }
 
   .portrait {
@@ -72,6 +55,5 @@ import portrait from "../assets/gallery/interview.jpg";
       gap: 2rem;
     }
     .portrait { max-width: 320px; }
-    .left { max-width: 320px; }
   }
 </style>
