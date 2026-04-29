@@ -88,7 +88,7 @@ const pieces = [
       return (
         <li>
           {p.href ? (
-            <a href={p.href} class="piece">{Inner}</a>
+            <a href={p.href} class="piece" target="_blank" rel="noopener noreferrer">{Inner}</a>
           ) : (
             <div class="piece piece--static">{Inner}</div>
           )}
