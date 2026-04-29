@@ -1,0 +1,192 @@
+---
+import Base from "../../layouts/Base.astro";
+import { Image } from "astro:assets";
+import portrait from "../../assets/work/articles/cayce-reese.jpg";
+
+const tags = ["Business", "Oconee State Bank", "Banking", "Storytelling"];
+---
+
+<Base
+  title="Q&A: Cayce Reese on Community Banking, Storytelling | Grace Joy Park"
+  description="Grace Joy Park's beat Q&A with Cayce Reese, marketing and business development coordinator at Oconee State Bank, on community storytelling and financial honesty."
+>
+  <p class="back"><a href="/work">&larr; Back to Writing</a></p>
+
+  <article class="post">
+    <h1>Q&amp;A: Cayce Reese on Intersection of Community Banking, Storytelling</h1>
+    <p class="meta muted">Reporting I, Grady College &middot; Feb. 14, 2026 &middot; By Grace Park</p>
+
+    <ul class="tags">
+      {tags.map((t) => <li>{t}</li>)}
+    </ul>
+
+    <figure class="hero">
+      <Image
+        src={portrait}
+        alt="Cayce Reese, marketing and business development coordinator at Oconee State Bank"
+        widths={[600, 900, 1200, 1600]}
+        sizes="(max-width: 720px) 100vw, 900px"
+        format="webp"
+      />
+      <figcaption>
+        Cayce Reese, marketing and business development coordinator for Oconee State Bank.
+        Reese transitioned from an executive assistant role to help lead the bank&rsquo;s
+        community storytelling and branding. (Photo/David McFarland)
+      </figcaption>
+    </figure>
+
+    <div class="prose">
+      <p class="lede">
+        Cayce Reese serves as the marketing and business development coordinator for
+        Oconee State Bank. Sitting at the intersection of local finance and community
+        storytelling, Reese offered a unique perspective on how community banks stay
+        competitive in a digital age. She discussed the balance between profit and
+        customer service, the importance of financial honesty for young professionals
+        and the critical role integrity plays in the future of business.
+      </p>
+
+      <p class="qa-q">
+        <strong>Q: What did you learn about the bank&rsquo;s mission while working at the
+        executive level? How does that make you a better storyteller?</strong>
+      </p>
+      <p>
+        It honestly transforms the way you see things when you sit in those strategic
+        meetings. You hear the executives explain the vision and not just the fun story
+        elements. As a storyteller, I do not just focus on the feelings. It has to drive
+        results. I think it is a beautiful combination to have the organizational skills
+        and the strategic understanding.
+      </p>
+
+      <p class="qa-q">
+        <strong>Q: When you meet small business owners in Athens or UGA students, what
+        would your advice be when managing money?</strong>
+      </p>
+      <p>
+        There is a really good book called &ldquo;Unreasonable Hospitality.&rdquo; It
+        talks about how you have to prioritize what matters. Manage your operational
+        costs well, but then find that 5 to 10 percent where you can have a little bit
+        of pizzazz. It is preplanned spontaneity that allows for the wow moments that
+        happen.
+      </p>
+
+      <p class="qa-q">
+        <strong>Q: What skills matter most to you looking into the future of business?</strong>
+      </p>
+      <p>
+        Integrity. When you sit in spaces where there is a high level of trust, people
+        are trusting you with major decisions that impact every single day of their
+        lives. It is not a small thing. Even with AI, if you cannot navigate AI with
+        integrity then we are in trouble.
+      </p>
+    </div>
+
+    <p class="full-link">
+      <a href="/work/cayce-reese-qa.pdf" target="_blank" rel="noopener noreferrer">
+        Read the full Q&amp;A (PDF) &rarr;
+      </a>
+    </p>
+
+    <section class="why-section">
+      <h2>Why I Wrote The Story</h2>
+      <p>
+        Community banking sounds dry until you talk to someone like Cayce Reese, who
+        frames money as a story about integrity and &ldquo;preplanned spontaneity.&rdquo;
+        The Q&amp;A format let her advice on financial honesty stand on its own without
+        me narrating over it, which is a skill I wanted more reps on. It also deepened
+        my business beat by opening Oconee State Bank as a recurring source for
+        small-business stories.
+      </p>
+    </section>
+  </article>
+</Base>
+
+<style>
+  .back { margin-bottom: 1rem; font-size: 0.95rem; }
+
+  .post h1 {
+    margin-bottom: 0.6rem;
+    line-height: 1.25;
+  }
+
+  .meta {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 1rem;
+  }
+
+  .tags {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .tags li {
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 0.15rem 0.7rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+  }
+
+  .hero {
+    margin: 0 0 1.5rem;
+  }
+
+  .hero :global(img) {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid var(--rule);
+  }
+
+  .hero figcaption {
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+    font-style: italic;
+    line-height: 1.5;
+    max-width: 65ch;
+  }
+
+  .prose p {
+    max-width: 65ch;
+    line-height: 1.7;
+    margin: 0 0 1rem;
+  }
+
+  .prose .lede {
+    font-size: 1.1rem;
+  }
+
+  .prose .qa-q {
+    margin-top: 1.75rem;
+  }
+
+  .full-link {
+    margin: 1.5rem 0 2.5rem;
+    font-size: 0.95rem;
+  }
+
+  .why-section {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
+    max-width: 65ch;
+  }
+
+  .why-section h2 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .why-section p {
+    margin: 0;
+    line-height: 1.6;
+  }
+</style>

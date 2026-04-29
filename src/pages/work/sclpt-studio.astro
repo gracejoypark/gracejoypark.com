@@ -1,0 +1,188 @@
+---
+import Base from "../../layouts/Base.astro";
+import { Image } from "astro:assets";
+import reformers from "../../assets/work/articles/sclpt-reformers.jpg";
+import mats from "../../assets/work/articles/sclpt-mats.jpg";
+
+const tags = ["Pilates", "Health and Wellness", "Athens", "Fitness", "Business"];
+---
+
+<Base
+  title="SCLPT Studio brings boutique wellness to Athens | Grace Joy Park"
+  description="Grace Joy Park's beat story on Athens boutique fitness studio SCLPT, co-founded by Alexis Cason and Genna Ringler."
+>
+  <p class="back"><a href="/work">&larr; Back to Writing</a></p>
+
+  <article class="post">
+    <h1>SCLPT Studio brings boutique wellness to Athens</h1>
+    <p class="meta muted">Reporting I, Grady College &middot; March 30, 2026 &middot; By Grace Park</p>
+
+    <ul class="tags">
+      {tags.map((t) => <li>{t}</li>)}
+    </ul>
+
+    <figure class="hero">
+      <Image
+        src={reformers}
+        alt="Reformer machines line the studio floor at SCLPT Studio"
+        widths={[600, 900, 1200, 1600]}
+        sizes="(max-width: 720px) 100vw, 900px"
+        format="webp"
+      />
+      <figcaption>
+        Reformer machines line the studio floor at SCLPT Studio in Athens, Ga. The boutique
+        fitness studio, co-founded by Alexis Cason and Genna Ringler, offers both reformer
+        Pilates and hot mat sculpt classes to members. (Photo/Grace Park)
+      </figcaption>
+    </figure>
+
+    <div class="prose">
+      <p class="lede">
+        SCLPT Studio brought something new to Athens, a boutique fitness studio combining
+        reformer Pilates and hot mat sculpt classes under one roof. Co-founders Alexis
+        Cason and Genna Ringler opened the studio one year ago, and it has already hit
+        maximum capacity.
+      </p>
+      <p>
+        The two co-founders identified a gap: Athens had no studio combining reformer
+        Pilates and hot mat sculpt classes under one roof, so they built one. The idea
+        took shape after both women independently visited the same heated mat Pilates
+        studio in New York City within a week of each other.
+      </p>
+      <p>
+        &ldquo;I believe we&rsquo;re actually one of the only studios in Georgia that
+        offers hot mat sculpt classes and reformers in the same studio,&rdquo; Ringler
+        said. SCLPT now runs 13 to 17 classes on a typical weekday, and nearly every
+        one fills a waitlist. The studio paused new memberships temporarily to protect
+        the experience for existing clients.
+      </p>
+    </div>
+
+    <figure class="secondary">
+      <Image
+        src={mats}
+        alt="Hot mat sculpt room at SCLPT Studio"
+        widths={[600, 900, 1200, 1600]}
+        sizes="(max-width: 720px) 100vw, 900px"
+        format="webp"
+      />
+      <figcaption>
+        Mats line the floor of the hot mat sculpt room at SCLPT Studio in Athens, Ga.
+        Co-founders Alexis Cason and Genna Ringler say the heated mat class offering
+        sets the studio apart from other fitness studios in the area. (Photo/Grace Park)
+      </figcaption>
+    </figure>
+
+    <p class="full-link">
+      <a href="/work/sclpt-studio.pdf" target="_blank" rel="noopener noreferrer">
+        Read the full story (PDF) &rarr;
+      </a>
+    </p>
+
+    <section class="why-section">
+      <h2>Why I Wrote The Story</h2>
+      <p>
+        A boutique studio hitting maximum capacity in its first year is a real Athens
+        business story, especially one led by two young women in a college town that
+        doesn&rsquo;t track that kind of growth. Reporting it pushed me to interview two
+        co-founders at once, hold a profit-versus-mission thread and let their philosophy
+        on mental health do the work instead of leaning on adjectives. It also strengthened
+        my business beat by giving me a recurring source set I can return to as the studio
+        scales.
+      </p>
+    </section>
+  </article>
+</Base>
+
+<style>
+  .back { margin-bottom: 1rem; font-size: 0.95rem; }
+
+  .post h1 {
+    margin-bottom: 0.6rem;
+    line-height: 1.25;
+  }
+
+  .meta {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 1rem;
+  }
+
+  .tags {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .tags li {
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 0.15rem 0.7rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+  }
+
+  .hero, .secondary {
+    margin: 0 0 1.5rem;
+  }
+
+  .secondary {
+    margin-top: 2rem;
+  }
+
+  .hero :global(img),
+  .secondary :global(img) {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid var(--rule);
+  }
+
+  .hero figcaption,
+  .secondary figcaption {
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+    font-style: italic;
+    line-height: 1.5;
+    max-width: 65ch;
+  }
+
+  .prose p {
+    max-width: 65ch;
+    line-height: 1.7;
+    margin: 0 0 1rem;
+  }
+
+  .prose .lede {
+    font-size: 1.1rem;
+  }
+
+  .full-link {
+    margin: 1.5rem 0 2.5rem;
+    font-size: 0.95rem;
+  }
+
+  .why-section {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
+    max-width: 65ch;
+  }
+
+  .why-section h2 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .why-section p {
+    margin: 0;
+    line-height: 1.6;
+  }
+</style>

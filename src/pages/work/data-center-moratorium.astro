@@ -1,0 +1,197 @@
+---
+import Base from "../../layouts/Base.astro";
+import { Image } from "astro:assets";
+import meeting from "../../assets/work/articles/data-center.jpg";
+import chamber from "../../assets/work/articles/data-center-2.jpg";
+
+const tags = ["Athens-Clarke County", "Mayor and Commissioners", "Data Centers", "Moratorium"];
+---
+
+<Base
+  title="ACC Commission extends delay on data center moratorium | Grace Joy Park"
+  description="Grace Joy Park's meeting story on the Athens-Clarke County commission vote to extend the data center moratorium through June 5."
+>
+  <p class="back"><a href="/work">&larr; Back to Writing</a></p>
+
+  <article class="post">
+    <h1>Athens-Clarke County Commission Extends Delay on Data Center Moratorium</h1>
+    <p class="meta muted">Reporting I, Grady College &middot; March 4, 2026 &middot; By Grace Park</p>
+
+    <ul class="tags">
+      {tags.map((t) => <li>{t}</li>)}
+    </ul>
+
+    <figure class="hero">
+      <Image
+        src={meeting}
+        alt="Community members at the Athens-Clarke County commission meeting"
+        widths={[600, 900, 1200, 1600]}
+        sizes="(max-width: 720px) 100vw, 900px"
+        format="webp"
+      />
+      <figcaption>
+        Community members attend the Athens-Clarke County Mayor and Commission meeting at
+        City Hall on March 3, 2026, in Athens, Ga. The meeting included discussion of
+        data centers, and commissioners later voted to keep the temporary pause on new
+        proposals in place through June 5. (Photo/Grace Park)
+      </figcaption>
+    </figure>
+
+    <div class="prose">
+      <p class="lede">
+        The Athens-Clarke County mayor and commissioners voted Tuesday at the regular
+        session commission meeting. They decided to extend a temporary pause on new data
+        centers through June 5, keeping new project proposals on hold after residents
+        expressed concerns about the increase in utility costs and strain on local water
+        and power systems.
+      </p>
+      <p>
+        The vote came March 3 at City Hall during the regular voting meeting. The pause
+        on new data centers started in December, and the March 3 vote pushed that deadline
+        back to early June.
+      </p>
+      <p>
+        Tawana Mattox, who holds a doctorate in higher education leadership and is an
+        Athens resident, urged county commissioners to reject new data centers in Athens.
+      </p>
+      <p>
+        &ldquo;No more data centers in our Black and working-class neighborhoods,&rdquo;
+        Mattox said. &ldquo;We cannot trade our health, our water, our air, our
+        neighborhoods for corporate profit.&rdquo;
+      </p>
+      <p>
+        In an interview, District 9 Commissioner Ovita Thornton said she initially saw the
+        data center in her district as just a warehouse, but later grew concerned about
+        what another facility could mean for nearby residents.
+      </p>
+    </div>
+
+    <figure class="secondary">
+      <Image
+        src={chamber}
+        alt="Athens-Clarke County commission chamber"
+        widths={[600, 900, 1200, 1600]}
+        sizes="(max-width: 720px) 100vw, 900px"
+        format="webp"
+      />
+      <figcaption>
+        Commissioners&rsquo; seats sit inside the Athens-Clarke County commission chamber
+        at City Hall on March 3, 2026, in Athens, Ga. The chamber is where commissioners
+        vote on council topics. (Photo/Grace Park)
+      </figcaption>
+    </figure>
+
+    <p class="full-link">
+      <a href="/work/data-center-moratorium.pdf" target="_blank" rel="noopener noreferrer">
+        Read the full story (PDF) &rarr;
+      </a>
+    </p>
+
+    <section class="why-section">
+      <h2>Why I Wrote The Story</h2>
+      <p>
+        The commission&rsquo;s vote to extend the moratorium through June 5 was the last
+        window for residents to push back before any new data center proposals can move,
+        which is why the room was full of people raising utility, water and
+        environmental-justice concerns. Covering the meeting taught me to track a vote
+        alongside several threads of public comment and condense a long agenda into a
+        clean lede with the stakes on top. It also pointed me to follow-up sources like
+        Commissioner Ovita Thornton and resident Olivia Asher, who I can return to before
+        the deadline.
+      </p>
+    </section>
+  </article>
+</Base>
+
+<style>
+  .back { margin-bottom: 1rem; font-size: 0.95rem; }
+
+  .post h1 {
+    margin-bottom: 0.6rem;
+    line-height: 1.25;
+  }
+
+  .meta {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 1rem;
+  }
+
+  .tags {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .tags li {
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 0.15rem 0.7rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+  }
+
+  .hero, .secondary {
+    margin: 0 0 1.5rem;
+  }
+
+  .secondary {
+    margin-top: 2rem;
+  }
+
+  .hero :global(img),
+  .secondary :global(img) {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid var(--rule);
+  }
+
+  .hero figcaption,
+  .secondary figcaption {
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+    font-style: italic;
+    line-height: 1.5;
+    max-width: 65ch;
+  }
+
+  .prose p {
+    max-width: 65ch;
+    line-height: 1.7;
+    margin: 0 0 1rem;
+  }
+
+  .prose .lede {
+    font-size: 1.1rem;
+  }
+
+  .full-link {
+    margin: 1.5rem 0 2.5rem;
+    font-size: 0.95rem;
+  }
+
+  .why-section {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
+    max-width: 65ch;
+  }
+
+  .why-section h2 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .why-section p {
+    margin: 0;
+    line-height: 1.6;
+  }
+</style>

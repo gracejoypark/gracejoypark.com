@@ -1,0 +1,163 @@
+---
+import Base from "../../layouts/Base.astro";
+import { Image } from "astro:assets";
+import banner from "../../assets/work/articles/twilight-banner.jpg";
+
+const tags = ["Twilight", "Cycling", "Athens", "Event Coverage"];
+---
+
+<Base
+  title="Former racer returns to Twilight Criterium | Grace Joy Park"
+  description="Grace Joy Park's vignette on a former Twilight racer scouting the downtown Athens course before the 46th Athens Orthopedic Clinic Twilight Criterium."
+>
+  <p class="back"><a href="/work">&larr; Back to Writing</a></p>
+
+  <article class="post">
+    <h1>Former racer returns to Athens Orthopedic Clinic Twilight Criterium as vendors prepare for race weekend</h1>
+    <p class="meta muted">Reporting I, Grady College &middot; April 17, 2026 &middot; By Grace Park</p>
+
+    <ul class="tags">
+      {tags.map((t) => <li>{t}</li>)}
+    </ul>
+
+    <figure class="hero">
+      <Image
+        src={banner}
+        alt="Twilight Criterium banner over the Silver Dollar Bar"
+        widths={[600, 900, 1200, 1600]}
+        sizes="(max-width: 720px) 100vw, 900px"
+        format="webp"
+      />
+      <figcaption>
+        A banner for the 46th Athens Orthopedic Clinic Twilight Criterium hangs above the
+        Silver Dollar Bar on Friday, April 17, 2026, ahead of the race weekend in downtown
+        Athens. (Photo/Grace Park)
+      </figcaption>
+    </figure>
+
+    <div class="prose">
+      <p class="lede">
+        Former Twilight racer Luke Harris rode through downtown Athens on Friday afternoon
+        with the UGA Cycling group, scouting the course a day before the 46th Athens
+        Orthopedic Clinic Twilight Criterium begins its pro races.
+      </p>
+      <p>
+        &ldquo;We are here doing a little fun ride and checking all the stuff out today,&rdquo;
+        Harris said. Harris came with the UGA Cycling group and previously competed at
+        Twilight with Kingdom, a cycling team. He expressed excitement and anticipation
+        for the upcoming men and women pro races.
+      </p>
+      <p>
+        Around him, the 46th Athens Orthopedic Clinic Twilight Criterium was still
+        preparing for its first full night. Food court vendors were setting up to serve
+        the Athens community. Musicians ran through sound checks ahead of the ALL THINGS
+        ATHENS concert on the Washington Street stage. Other cyclists rode through the
+        streets, some stopping to do tricks or browse the vendor tents.
+      </p>
+    </div>
+
+    <p class="full-link">
+      <a href="/work/twilight-criterium.pdf" target="_blank" rel="noopener noreferrer">
+        Read the full story (PDF) &rarr;
+      </a>
+    </p>
+
+    <section class="why-section">
+      <h2>Why I Wrote The Story</h2>
+      <p>
+        Twilight pulls thousands of people into downtown Athens each spring, so even the
+        day-before scene mattered to readers planning around the closures and the food
+        court. Writing the vignette taught me to build a story in real time. I picked
+        one source whose presence answered &ldquo;why come back?&rdquo; and used
+        observation around him to set the scene without padding.
+      </p>
+    </section>
+  </article>
+</Base>
+
+<style>
+  .back { margin-bottom: 1rem; font-size: 0.95rem; }
+
+  .post h1 {
+    margin-bottom: 0.6rem;
+    line-height: 1.25;
+  }
+
+  .meta {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 1rem;
+  }
+
+  .tags {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .tags li {
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 0.15rem 0.7rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+  }
+
+  .hero {
+    margin: 0 0 1.5rem;
+  }
+
+  .hero :global(img) {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid var(--rule);
+  }
+
+  .hero figcaption {
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+    font-style: italic;
+    line-height: 1.5;
+    max-width: 65ch;
+  }
+
+  .prose p {
+    max-width: 65ch;
+    line-height: 1.7;
+    margin: 0 0 1rem;
+  }
+
+  .prose .lede {
+    font-size: 1.1rem;
+  }
+
+  .full-link {
+    margin: 1.5rem 0 2.5rem;
+    font-size: 0.95rem;
+  }
+
+  .why-section {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
+    max-width: 65ch;
+  }
+
+  .why-section h2 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .why-section p {
+    margin: 0;
+    line-height: 1.6;
+  }
+</style>
