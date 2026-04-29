@@ -62,6 +62,21 @@ const tags = ["Twilight", "Cycling", "Athens", "Event Coverage"];
       </a>
     </p>
 
+    <section class="reel-section">
+      <h2>Reel</h2>
+      <p class="reel-intro muted">
+        My field reel from Twilight weekend, posted to Instagram and tagged @ugagrady.
+      </p>
+      <div class="reel-wrap">
+        <blockquote
+          class="instagram-media"
+          data-instgrm-permalink="https://www.instagram.com/p/DXcYo5viZgU/"
+          data-instgrm-version="14"
+        ></blockquote>
+      </div>
+      <script async src="https://www.instagram.com/embed.js"></script>
+    </section>
+
     <section class="why-section">
       <h2>Why I Wrote The Story</h2>
       <p>
@@ -142,6 +157,33 @@ const tags = ["Twilight", "Cycling", "Athens", "Event Coverage"];
   .full-link {
     margin: 1.5rem 0 2.5rem;
     font-size: 0.95rem;
+  }
+
+  .reel-section {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
+    max-width: 900px;
+  }
+
+  .reel-section h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  .reel-intro {
+    margin: 0 0 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .reel-wrap {
+    max-width: 540px;
+  }
+
+  .reel-wrap :global(.instagram-media) {
+    min-width: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
   }
 
   .why-section {

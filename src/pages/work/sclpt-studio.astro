@@ -21,6 +21,17 @@ const tags = ["Pilates", "Health and Wellness", "Athens", "Fitness", "Business"]
       {tags.map((t) => <li>{t}</li>)}
     </ul>
 
+    <aside class="budget">
+      <span class="budget-label">Budget line</span>
+      <p>
+        Pilates has surged in popularity nationwide, but Athens had no boutique
+        studio offering both reformer Pilates and hot mat sculpt classes. SCLPT
+        Studio co-founders Alexis Cason and Genna Ringler opened one year ago to
+        fill that gap. The studio hit maximum capacity and paused new memberships,
+        signaling an untapped demand for wellness-focused fitness in Athens.
+      </p>
+    </aside>
+
     <figure class="hero">
       <Image
         src={reformers}
@@ -70,6 +81,18 @@ const tags = ["Pilates", "Health and Wellness", "Athens", "Fitness", "Business"]
         Mats line the floor of the hot mat sculpt room at SCLPT Studio in Athens, Ga.
         Co-founders Alexis Cason and Genna Ringler say the heated mat class offering
         sets the studio apart from other fitness studios in the area. (Photo/Grace Park)
+      </figcaption>
+    </figure>
+
+    <figure class="video-figure">
+      <video controls preload="metadata" playsinline>
+        <source src="/work/sclpt-broll.mov" type="video/quicktime" />
+        <source src="/work/sclpt-broll.mov" type="video/mp4" />
+        Your browser does not support inline video.
+        <a href="/work/sclpt-broll.mov" target="_blank" rel="noopener noreferrer">Download the B-roll clip</a>.
+      </video>
+      <figcaption>
+        B-roll from inside SCLPT Studio. (Video/Grace Park)
       </figcaption>
     </figure>
 
@@ -128,12 +151,56 @@ const tags = ["Pilates", "Health and Wellness", "Athens", "Fitness", "Business"]
     color: var(--muted);
   }
 
+  .budget {
+    margin: 0 0 2rem;
+    padding: 1rem 1.25rem;
+    background: #f3efe6;
+    border-left: 3px solid var(--accent);
+    max-width: 900px;
+  }
+
+  .budget-label {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin-bottom: 0.4rem;
+  }
+
+  .budget p {
+    margin: 0;
+    line-height: 1.6;
+  }
+
   .hero, .secondary {
     margin: 0 0 1.5rem;
   }
 
   .secondary {
     margin-top: 2rem;
+  }
+
+  .video-figure {
+    margin: 2rem 0 1.5rem;
+    max-width: 900px;
+  }
+
+  .video-figure video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid var(--rule);
+    background: #000;
+  }
+
+  .video-figure figcaption {
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+    font-style: italic;
+    line-height: 1.5;
+    max-width: 900px;
   }
 
   .hero :global(img),
