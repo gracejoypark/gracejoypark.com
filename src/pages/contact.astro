@@ -5,12 +5,24 @@ import Base from "../layouts/Base.astro";
 <Base title="Contact | Grace Joy Park">
   <h1>Contact</h1>
   <p>
-    The best way to reach me is by email:
-    <a href="mailto:grace@gracejoypark.com">grace@gracejoypark.com</a>.
+    The best way to reach me is by email and my phone number.
   </p>
+  <ul class="contact-list">
+    <li>Email: <a href="mailto:grace@gracejoypark.com">grace@gracejoypark.com</a></li>
+    <li>Phone: <a href="tel:+17708806995">(770) 880-6995</a></li>
+  </ul>
   <p>
     You can also find me on
     <a href="https://www.linkedin.com/in/grace-park-683434294/" target="_blank" rel="noopener noreferrer">LinkedIn</a> and
     <a href="https://www.instagram.com/grace.park_reporting/" target="_blank" rel="noopener noreferrer">Instagram</a>.
   </p>
 </Base>
+
+<style>
+  .contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    line-height: 1.9;
+  }
+</style>
