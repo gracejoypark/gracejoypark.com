@@ -84,23 +84,45 @@ const tags = ["Pilates", "Health and Wellness", "Athens", "Fitness", "Business"]
       </figcaption>
     </figure>
 
-    <figure class="video-figure">
-      <video controls preload="metadata" playsinline>
-        <source src="/work/sclpt-broll.mov" type="video/quicktime" />
-        <source src="/work/sclpt-broll.mov" type="video/mp4" />
-        Your browser does not support inline video.
-        <a href="/work/sclpt-broll.mov" target="_blank" rel="noopener noreferrer">Download the B-roll clip</a>.
-      </video>
-      <figcaption>
-        B-roll from inside SCLPT Studio. (Video/Grace Park)
-      </figcaption>
-    </figure>
-
     <p class="full-link">
       <a href="/work/sclpt-studio.pdf" target="_blank" rel="noopener noreferrer">
         Read the full story (PDF) &rarr;
       </a>
     </p>
+
+    <section class="multimedia-section">
+      <h2>Other multimedia sources</h2>
+
+      <figure class="video-figure">
+        <video controls preload="metadata" playsinline>
+          <source src="/work/sclpt-broll.mov" type="video/quicktime" />
+          <source src="/work/sclpt-broll.mov" type="video/mp4" />
+          Your browser does not support inline video.
+          <a href="/work/sclpt-broll.mov" target="_blank" rel="noopener noreferrer">Download the B-roll clip</a>.
+        </video>
+        <figcaption>
+          B-roll from inside SCLPT Studio. (Video/Grace Park)
+        </figcaption>
+      </figure>
+
+      <div class="pitch-block">
+        <h3>Beat pitch presentation</h3>
+        <div class="pdf-embed">
+          <object data="/work/sclpt-pitch-proposal.pdf#view=FitH" type="application/pdf" width="100%" height="700">
+            <p>
+              Your browser can&rsquo;t display PDFs inline.
+              <a href="/work/sclpt-pitch-proposal.pdf" target="_blank" rel="noopener noreferrer">Download the pitch (PDF)</a>
+              to view it.
+            </p>
+          </object>
+        </div>
+        <p class="pdf-link">
+          <a href="/work/sclpt-pitch-proposal.pdf" target="_blank" rel="noopener noreferrer">
+            Open the pitch in a new tab &rarr;
+          </a>
+        </p>
+      </div>
+    </section>
 
     <section class="why-section">
       <h2>Why I Wrote The Story</h2>
@@ -181,9 +203,20 @@ const tags = ["Pilates", "Health and Wellness", "Athens", "Fitness", "Business"]
     margin-top: 2rem;
   }
 
+  .multimedia-section {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  .multimedia-section h2 {
+    margin-bottom: 1.25rem;
+    font-size: 1.2rem;
+  }
+
   .video-figure {
-    margin: 2rem 0 1.5rem;
-    max-width: 900px;
+    margin: 0 0 2rem;
+    max-width: 540px;
   }
 
   .video-figure video {
@@ -200,7 +233,40 @@ const tags = ["Pilates", "Health and Wellness", "Athens", "Fitness", "Business"]
     color: var(--muted);
     font-style: italic;
     line-height: 1.5;
+    max-width: 540px;
+  }
+
+  .pitch-block {
     max-width: 900px;
+  }
+
+  .pitch-block h3 {
+    margin: 1rem 0 0.75rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    font-weight: 600;
+  }
+
+  .pdf-embed {
+    border: 1px solid var(--rule);
+    background: #f3efe6;
+  }
+
+  .pdf-embed object {
+    display: block;
+  }
+
+  .pdf-link {
+    margin: 0.75rem 0 0;
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 720px) {
+    .pdf-embed object {
+      height: 500px;
+    }
   }
 
   .hero :global(img),
