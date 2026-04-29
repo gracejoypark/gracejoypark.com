@@ -93,10 +93,9 @@ const pieces = [
             <div class="piece piece--static">{Inner}</div>
           )}
           {p.why && (
-            <div class="why">
-              <span class="why-label">Why I wrote it</span>
-              <p>{p.why}</p>
-            </div>
+            <p class="why">
+              <span class="why-label">Why I wrote it:</span> {p.why}
+            </p>
           )}
         </li>
       );
@@ -172,22 +171,15 @@ const pieces = [
   }
 
   .why {
+    margin: 0;
     padding: 0 0 1.5rem;
     max-width: 65ch;
+    color: var(--muted);
+    line-height: 1.6;
   }
 
   .why-label {
-    display: block;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--muted);
-    margin-bottom: 0.4rem;
-  }
-
-  .why p {
-    margin: 0;
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-style: italic;
+    color: var(--ink);
   }
 </style>
