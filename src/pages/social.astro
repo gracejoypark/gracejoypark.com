@@ -12,8 +12,70 @@ const posts = [
 
 <Base title="Social Media | Grace Joy Park">
   <h1>Social Media</h1>
-  <p class="muted lead">A few favorite posts from Instagram.</p>
+  <p class="muted lead">How I used Instagram this semester to cover Athens, build a beat audience and learn how working journalists publish in the feed.</p>
 
+  <section class="reflection">
+    <h2>My Instagram plan</h2>
+    <p>
+      I came into Reporting I planning to use Instagram the way working
+      journalists do, as a place to publish field reels, build a small
+      audience around my business beat and show editors I can think in
+      pictures and pacing, not just inverted pyramids. I posted to
+      @grace.park_uga across the semester and tagged @ugagrady on the
+      reels that fit the Grady community feed.
+    </p>
+
+    <h2>What I posted and the skills I gained</h2>
+    <p>
+      The Beat Meet and Greet reel introduced me to my source, Cayce Reese
+      of Oconee State Bank, and gave me practice interviewing on camera
+      before I sat down for the longer Q&amp;A. Cutting a clip down to 10
+      seconds taught me to pick a single sentence that carried the meeting,
+      then let the room do the rest. The Athens Orthopedic Clinic Twilight
+      Criterium reel pushed me into shooting a scene as it unfolded, the
+      banner over Silver Dollar Bar, the food court setup, the cyclists
+      scouting the course, and condense a race weekend into a clip without
+      voiceover. The carousel post taught me that a single still can carry
+      a story when the caption is written like a lede instead of a quote.
+    </p>
+
+    <h2>Engagement</h2>
+    <p>
+      The numbers were modest but real for a school-quarter beat. The Beat
+      Meet and Greet reel earned 22 likes, the Twilight reel 12 and the
+      event carousel 15, mostly from classmates, sources and Grady faculty.
+      The lesson was that reach on a small account comes from tagging the
+      people in the frame and the institutions covering them, not from
+      chasing a trending audio. Tagging @ugagrady on the Twilight reel put
+      it in front of the school&rsquo;s journalism community, which is a
+      better audience for a clip than a viral one.
+    </p>
+
+    <h2>Accounts I followed and learned from</h2>
+    <p>
+      I followed @apnews and @nytimes for how they write the caption like
+      a headline rather than a description of the photo. @ugagrady showed
+      me the rhythm of how a journalism school presents student work, and
+      gave me a model for how to write a reel caption that reads like a
+      tip line. I also followed peers in my Reporting I cohort to track
+      how they were covering their own beats, which kept me honest about
+      pacing and consistency.
+    </p>
+
+    <h2>The opportunity for journalists on Instagram</h2>
+    <p>
+      Instagram rewards reporters who treat reels like field notebooks. A
+      10-second clip from a city commission meeting or a race weekend can
+      reach readers who would never click a 700-word story, and a tagged
+      source often reshares the reel to an audience my byline never
+      reaches. For a business beat in Athens, the opportunity is to build
+      a recurring presence with the small businesses and community
+      institutions I cover, so the next time I email asking for an
+      interview, they recognize me from the feed.
+    </p>
+  </section>
+
+  <h2 class="posts-heading">Selected posts</h2>
   <div class="grid">
     {posts.map(({ id, type }) => (
       <div class={`embed ${type === "reel" ? "is-reel" : "is-post"}`}>
@@ -33,6 +95,31 @@ const posts = [
 
 <style>
   .lead { margin-bottom: 2.5rem; }
+
+  .reflection {
+    margin-bottom: 3rem;
+  }
+
+  .reflection h2 {
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+  }
+
+  .reflection h2:first-child {
+    margin-top: 0;
+  }
+
+  .reflection p {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .posts-heading {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+  }
 
   .grid {
     display: grid;
