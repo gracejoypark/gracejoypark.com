@@ -29,38 +29,16 @@ const instagramPosts = [
   .lead { margin-bottom: 2.5rem; }
 
   .grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+    align-items: start;
   }
 
-  /* Each embed sized to Instagram's natural reel width and centered in the row. */
+  /* Instagram's embed sets its own min/max width; nudge it to behave inside the grid. */
   .grid :global(.instagram-media) {
     min-width: 0 !important;
-    width: 540px !important;
-    max-width: 100% !important;
+    width: 100% !important;
     margin: 0 !important;
-    flex: 0 0 540px;
-  }
-
-  /* Force enough vertical room for vertical reels so black bars don't appear. */
-  .grid :global(iframe.instagram-media) {
-    min-height: 820px !important;
-  }
-  .grid :global(.instagram-media iframe) {
-    min-height: 820px !important;
-  }
-
-  @media (max-width: 600px) {
-    .grid :global(.instagram-media) {
-      width: 100% !important;
-      flex-basis: 100%;
-    }
-    .grid :global(iframe.instagram-media),
-    .grid :global(.instagram-media iframe) {
-      min-height: 720px !important;
-    }
   }
 </style>
