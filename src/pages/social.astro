@@ -12,7 +12,70 @@ const posts = [
 
 <Base title="Social Media | Grace Joy Park">
   <h1>Social Media</h1>
-  <p class="muted lead">A few favorite posts from Instagram.</p>
+
+  <section class="reflection">
+    <p>
+      Over the course of the semester, my Instagram (@grace.park_uga)
+      became a place where I could practice journalism outside the
+      classroom and document what I was learning in Reporting I.
+    </p>
+    <p>
+      Honestly, when we started, I was not comfortable with the idea of
+      building a public-facing account tied to my name and my work.
+      Posting my own reporting felt exposing, and I worried about how it
+      would come across. Pushing through that hesitation ended up being
+      one of the most valuable parts of the semester. I had to step out
+      of my comfort zone, and in doing so I learned what it actually
+      means to maintain a professional social media presence as a
+      journalist. That meant thinking carefully about tone, being
+      consistent with how I introduced myself and my stories, writing
+      captions that sounded credible rather than casual and treating
+      every post as something a future editor or source could see.
+    </p>
+    <p>
+      One of the biggest skills I picked up was producing short-form
+      video. I learned how to cover an event in under 60 seconds,
+      figuring out what to include, writing a tight script, choosing
+      B-roll that actually supports the story and adding captions so the
+      reel reads even without sound. Editing for that length forced me
+      to think harder about what the lede really is, and that carries
+      over into my written reporting.
+    </p>
+    <p>
+      Following accounts like @nytimes, @apnews and @theredandblack also
+      shaped how I approach my own posts. The Red and Black in particular
+      gave me a closer look at AP Style in practice: how headlines get
+      phrased, when numbers are spelled out versus written as digits and
+      how attributions are handled in caption copy. Seeing AP Style
+      applied to local UGA stories made it click for me in a way the
+      stylebook on its own didn&rsquo;t. The bigger national accounts
+      taught me a different lesson about how a major newsroom packages
+      breaking news for a scrolling audience without losing accuracy,
+      and watching how they balanced personality with credibility gave
+      me a model for what a professional journalist&rsquo;s feed can
+      look like.
+    </p>
+    <p>
+      In terms of engagement, I ended the semester with 54 followers,
+      and my reels consistently pulled between 400 and 500 views each,
+      which felt like a strong sign that the content was reaching beyond
+      just my immediate circle. My semester wrap-up post pulling together
+      everything I worked on in Reporting I was a useful way to see which
+      formats my audience responded to most.
+    </p>
+    <p>
+      What I take away most is how much Instagram has opened up for
+      journalists, and how much I personally grew by leaning into it
+      instead of avoiding it. It isn&rsquo;t just a place to repost
+      articles. Reels reach people who would never click through to a
+      website, story polls and question stickers can crowdsource sources
+      or quotes, and the platform doubles as a live portfolio that
+      editors and recruiters can find without me having to send
+      anything. For a student journalist, a public Instagram is
+      essentially a clip file that&rsquo;s always growing, and I leave
+      this semester a lot more confident about putting my work out there.
+    </p>
+  </section>
 
   <div class="grid">
     {posts.map(({ id, type }) => (
@@ -32,7 +95,18 @@ const posts = [
 </Base>
 
 <style>
-  .lead { margin-bottom: 2.5rem; }
+  .reflection {
+    margin-bottom: 3rem;
+  }
+
+  .reflection p {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .reflection p:last-child {
+    margin-bottom: 0;
+  }
 
   .grid {
     display: grid;
