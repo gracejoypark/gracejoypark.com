@@ -44,6 +44,14 @@ const posts = [
 
   .embed {
     width: 100%;
+    /*
+     * Cap each embed at the width Instagram's internal player actually
+     * fills. Above ~330px the video stops scaling and IG fills the leftover
+     * space with black side bars. Capping here removes the bars and keeps
+     * the embed centered inside its grid column.
+     */
+    max-width: 330px;
+    margin: 0 auto;
     background: #000;
     border: 1px solid var(--rule);
     overflow: hidden;
@@ -51,9 +59,9 @@ const posts = [
   }
 
   /*
-   * Reels: lock the box to the 9:16 video shape so the reel touches top and
-   * bottom of the frame. Push Instagram's header up and the footer down past
-   * the visible area by oversizing the iframe and offsetting it.
+   * Reels: 9:16 frame so the reel video fills top to bottom. Then oversize
+   * the iframe and offset it upward so Instagram's username header and
+   * likes/comments footer push past the visible edges.
    */
   .embed.is-reel {
     aspect-ratio: 9 / 16;
@@ -70,19 +78,20 @@ const posts = [
   }
 
   /*
-   * Carousels / photo posts: image is roughly 1:1, but the embed adds header
-   * and footer chrome. Give it enough vertical room to show photo + chrome.
+   * Carousels / photo posts: photo inside is roughly square, so a 1:1
+   * frame plus the chrome-crop trick shows just the image.
    */
   .embed.is-post {
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 1 / 1;
     background: #fff;
   }
 
   .embed.is-post iframe {
     position: absolute;
-    inset: 0;
+    top: -60px;
+    left: 0;
     width: 100% !important;
-    height: 100% !important;
+    height: calc(100% + 220px) !important;
     border: 0;
     display: block;
   }
