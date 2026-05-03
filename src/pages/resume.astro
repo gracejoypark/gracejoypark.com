@@ -66,16 +66,6 @@ const otherWork = [
     <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Download as PDF &rarr;</a>
   </p>
 
-  <div class="pdf-embed">
-    <object data="/resume.pdf#view=FitH" type="application/pdf" width="100%" height="900">
-      <p>
-        Your browser can't display PDFs inline.
-        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Download the PDF</a>
-        to view it.
-      </p>
-    </object>
-  </div>
-
   <hr />
 
   <section>
@@ -149,22 +139,6 @@ const otherWork = [
 
 <style>
   .download { margin-bottom: 1rem; }
-
-  .pdf-embed {
-    margin: 1rem 0 2rem;
-    border: 1px solid var(--rule);
-    background: #f3efe6;
-  }
-
-  .pdf-embed object {
-    display: block;
-  }
-
-  @media (max-width: 720px) {
-    .pdf-embed object {
-      height: 600px;
-    }
-  }
 
   section { margin-bottom: 2.5rem; }
 
