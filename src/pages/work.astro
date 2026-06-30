@@ -7,6 +7,7 @@ import sclptHero from "../assets/work/articles/sclpt-reformers.jpg";
 import dataCenterHero from "../assets/work/articles/data-center.jpg";
 import cayceHero from "../assets/work/articles/cayce-reese.jpg";
 import nozHero from "../assets/work/noz/noz-hero.jpg";
+import nozSocial from "../assets/work/noz/noz-social-post.png";
 
 const advertising = [
   {
@@ -18,6 +19,17 @@ const advertising = [
     image: nozHero,
     caption: "The Nöz storefront I built in Shopify for the Global Career Accelerator. (Store build/Grace Park)",
     tags: ["Digital Marketing", "Shopify", "SEO", "Copywriting", "Brand Strategy"],
+  },
+  {
+    title: "Nöz: Designing an Instagram Post",
+    publication: "The Global Career Accelerator",
+    date: "June 2026",
+    href: "/work/noz-social-post",
+    summary: "Designed an Instagram post in Canva for Nöz, a simulated SPF brand, and built the social strategy around it from competitor research to on-brand community replies.",
+    image: nozSocial,
+    caption: "The Instagram post I designed for Nöz in Canva. (Design/Grace Park)",
+    portrait: true,
+    tags: ["Social Media", "Content Design", "Canva", "Instagram", "Brand Voice"],
   },
 ];
 
@@ -123,7 +135,7 @@ const sections = [
               </div>
               <div class="title">{p.title}</div>
               {p.image && (
-                <figure class="photo-figure">
+                <figure class={p.portrait ? "photo-figure photo-figure--portrait" : "photo-figure"}>
                   <Image
                     src={p.image}
                     alt={p.caption || p.title}
@@ -225,6 +237,10 @@ const sections = [
   .piece :global(.photo-figure) {
     margin: 0 auto 1rem;
     max-width: 900px;
+  }
+
+  .piece :global(.photo-figure--portrait) {
+    max-width: 380px;
   }
 
   .piece :global(.photo) {

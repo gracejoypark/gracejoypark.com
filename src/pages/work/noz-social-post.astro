@@ -1,0 +1,199 @@
+---
+import Base from "../../layouts/Base.astro";
+import { Image } from "astro:assets";
+import socialPost from "../../assets/work/noz/noz-social-post.png";
+
+const tags = ["Social Media", "Content Design", "Canva", "Instagram", "Brand Voice"];
+
+const pillars = ["Retail and shopping moments", "Lifestyle and user-generated content", "SPF education"];
+---
+
+<Base
+  title="Nöz: Designing an Instagram Post | Grace Joy Park"
+  description="Grace Joy Park's social media case study: designing an Instagram post in Canva and building the brand voice for Nöz, a simulated SPF brand, through the Global Career Accelerator."
+>
+  <p class="back"><a href="/work">&larr; Back to Work</a></p>
+
+  <article class="post">
+    <h1>Nöz: Designing an Instagram Post</h1>
+    <p class="meta muted">The Global Career Accelerator &middot; June 2026 &middot; Social Media</p>
+
+    <ul class="tags">
+      {tags.map((t) => <li>{t}</li>)}
+    </ul>
+
+    <figure class="design-figure">
+      <Image
+        src={socialPost}
+        alt="Instagram post for Nöz showing four neon SPF sticks with the headline SPF that goes where you do"
+        widths={[400, 700, 1080]}
+        sizes="(max-width: 720px) 85vw, 440px"
+        format="webp"
+      />
+      <figcaption>The Instagram post I designed for Nöz in Canva. (Design/Grace Park)</figcaption>
+    </figure>
+
+    <div class="prose">
+      <p class="lede">
+        I designed an Instagram post for Nöz and built the social strategy around it, from
+        competitor research to the brand voice I used to answer comments. Nöz is a simulated
+        brand the Global Career Accelerator provides for training, so this was a project
+        build rather than a real account.
+      </p>
+
+      <h2>The post</h2>
+      <p>
+        I designed the post in Canva for the product photography pillar. I lined up the four
+        neon Nöz sticks on a soft gradient so the colors do most of the selling, then kept
+        the copy short. &ldquo;SPF that goes where you do&rdquo; leads, and a single line
+        underneath, &ldquo;Colorful, reef-safe sun care for every day outside,&rdquo;
+        explains the product. I wanted a post that reads as a style brand first and a
+        sunscreen second, which is how Nöz wants to show up.
+      </p>
+
+      <h2>Competitor research</h2>
+      <p>
+        Before designing, I studied @supergoop, a Nöz competitor, and pulled three content
+        pillars from its feed:
+      </p>
+      <ul class="pillars">
+        {pillars.map((p) => <li>{p}</li>)}
+      </ul>
+      <p>
+        I compared its Instagram and TikTok and found the same themes on both, just more
+        casual and video-first on TikTok. That gave me a map for where my post fit and what
+        the product photography pillar needed to look like to feel at home in the feed.
+      </p>
+
+      <h2>Brand voice</h2>
+      <p>
+        The project also covered community management. I drafted Nöz replies to comments
+        across TikTok, Instagram, Reddit, X, Facebook and Pinterest, following an escalation
+        plan that decides when a brand should respond. I kept the voice warm and consistent
+        while still handling pricing pushback and product complaints. One reply I wrote to a
+        comment comparing prices:
+      </p>
+      <blockquote class="reply">
+        We love that you&rsquo;re excited to take Nöz with you. For anyone comparing prices,
+        our SPF 45 sticks are made with reef-safe, vegan ingredients and biodegradable
+        cardboard packaging, so you&rsquo;re getting sun care that works hard and treats the
+        planet kindly.
+      </blockquote>
+    </div>
+
+    <section class="why-section">
+      <h2>What I Learned</h2>
+      <p>
+        Designing the post taught me to let the product colors carry the message and to
+        write copy that fits a feed instead of an essay. Writing the replies taught me how a
+        brand holds one voice across very different platforms and audiences, even when the
+        comment is a complaint.
+      </p>
+    </section>
+  </article>
+</Base>
+
+<style>
+  .back { margin-bottom: 1rem; font-size: 0.95rem; }
+
+  .post h1 {
+    margin-bottom: 0.6rem;
+    line-height: 1.25;
+  }
+
+  .meta {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 1rem;
+  }
+
+  .tags {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .tags li {
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 0.15rem 0.7rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+  }
+
+  .design-figure {
+    margin: 0 auto 2rem;
+    max-width: 440px;
+    text-align: center;
+  }
+
+  .design-figure :global(img) {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid var(--rule);
+  }
+
+  .design-figure figcaption {
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+    font-style: italic;
+    line-height: 1.5;
+  }
+
+  .prose p {
+    line-height: 1.7;
+    margin: 0 0 1rem;
+  }
+
+  .prose .lede {
+    font-size: 1.1rem;
+  }
+
+  .prose h2 {
+    margin: 2rem 0 0.75rem;
+    font-size: 1.2rem;
+  }
+
+  .pillars {
+    margin: 0 0 1rem;
+    padding-left: 1.25rem;
+  }
+
+  .pillars li {
+    margin-bottom: 0.4rem;
+    line-height: 1.6;
+  }
+
+  .reply {
+    margin: 0 0 1rem;
+    padding: 0.75rem 0 0.75rem 1rem;
+    border-left: 3px solid var(--accent);
+    color: var(--muted);
+    font-style: italic;
+    line-height: 1.7;
+  }
+
+  .why-section {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  .why-section h2 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .why-section p {
+    margin: 0;
+    line-height: 1.6;
+  }
+</style>
