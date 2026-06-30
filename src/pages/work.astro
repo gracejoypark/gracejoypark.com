@@ -1,13 +1,5 @@
 ---
 import Base from "../layouts/Base.astro";
-import { Image } from "astro:assets";
-import cutline from "../assets/work/cutline.jpg";
-import twilightHero from "../assets/work/articles/twilight-banner.jpg";
-import sclptHero from "../assets/work/articles/sclpt-reformers.jpg";
-import dataCenterHero from "../assets/work/articles/data-center.jpg";
-import cayceHero from "../assets/work/articles/cayce-reese.jpg";
-import nozHero from "../assets/work/noz/noz-hero.jpg";
-import nozSocial from "../assets/work/noz/noz-social-post.png";
 
 const advertising = [
   {
@@ -16,8 +8,6 @@ const advertising = [
     date: "June 2026",
     href: "/work/noz-shopify",
     summary: "Built and marketed a Shopify storefront end to end for Nöz, a simulated reef-safe SPF brand, covering brand strategy, copy, SEO and conversion optimization.",
-    image: nozHero,
-    caption: "The Nöz storefront I built in Shopify for the Global Career Accelerator. (Store build/Grace Park)",
     tags: ["Digital Marketing", "Shopify", "SEO", "Copywriting", "Brand Strategy"],
   },
   {
@@ -26,9 +16,6 @@ const advertising = [
     date: "June 2026",
     href: "/work/noz-social-post",
     summary: "Designed an Instagram post in Canva for Nöz, a simulated SPF brand, and built the social strategy around it from competitor research to on-brand community replies.",
-    image: nozSocial,
-    caption: "The Instagram post I designed for Nöz in Canva. (Design/Grace Park)",
-    portrait: true,
     tags: ["Social Media", "Content Design", "Canva", "Instagram", "Brand Voice"],
   },
 ];
@@ -40,10 +27,7 @@ const journalism = [
     date: "April 2026",
     href: "/work/twilight",
     summary: "A former Twilight racer returned to scout the downtown Athens course as vendors and musicians prepared for the 46th Athens Orthopedic Clinic Twilight Criterium.",
-    image: twilightHero,
-    caption: "A banner for the 46th Athens Orthopedic Clinic Twilight Criterium hangs above the Silver Dollar Bar on Friday, April 17, 2026. (Photo/Grace Park)",
     tags: ["Twilight", "Cycling", "Athens", "Event Coverage"],
-    why: "Twilight was a field assignment, but it was a real one. Half of downtown shuts down the weekend it runs and people were looking for any kind of preview. Walking up to a stranger in cycling gear and asking him questions on camera was the part I had been avoiding all semester, and once I did it I realized the rest of the reporting was just describing what was already happening around me. The hardest part was deciding what to leave out. There was a band soundchecking, food court tents going up and cyclists tricking through the closed streets, and only one of those details belonged in the lede.",
   },
   {
     title: "SCLPT Studio brings boutique wellness to Athens",
@@ -51,10 +35,7 @@ const journalism = [
     date: "March 2026",
     href: "/work/sclpt-studio",
     summary: "Co-founders Alexis Cason and Genna Ringler opened a boutique fitness studio combining reformer Pilates and hot mat sculpt classes and hit maximum capacity within a year.",
-    image: sclptHero,
-    caption: "Reformer machines line the studio floor at SCLPT Studio in Athens, Ga. (Photo/Grace Park)",
     tags: ["Pilates", "Health and Wellness", "Athens", "Fitness", "Business"],
-    why: "A studio run by two women in their 20s that hit capacity in its first year is the kind of small-business story Athens papers don\u2019t always pick up. I sat down with both co-founders in the same interview, which I had not done before, and figured out how to ask one question that fit both of them instead of running it like two separate Q&As. The story also forced me to keep the profit thread and the mission thread on the page at the same time, since leaning into either one alone would have made the studio sound like a brochure.",
   },
   {
     title: "Athens-Clarke County Commission Extends Delay on Data Center Moratorium",
@@ -62,10 +43,7 @@ const journalism = [
     date: "March 2026",
     href: "/work/data-center-moratorium",
     summary: "Athens-Clarke County commissioners voted to extend the temporary pause on new data centers through June 5 after residents raised concerns about utility costs, water use and power demand.",
-    image: dataCenterHero,
-    caption: "Community members attend the Athens-Clarke County Mayor and Commission meeting at City Hall on March 3, 2026, in Athens, Ga. (Photo/Grace Park)",
     tags: ["Athens-Clarke County", "Mayor and Commissioners", "Data Centers", "Moratorium"],
-    why: "I went into the meeting expecting a procedural vote and walked out with a notebook of utility bills, water concerns and a resident telling commissioners not to put another data center in her neighborhood. The reporting challenge was holding all of that on top of a long agenda and still finding the lede. Commissioner Ovita Thornton and resident Olivia Asher are the kind of follow-up sources I want to call before the June deadline.",
   },
   {
     title: "Q&A: Cayce Reese on Intersection of Community Banking, Storytelling",
@@ -73,20 +51,14 @@ const journalism = [
     date: "February 2026",
     href: "/work/cayce-reese-qa",
     summary: "Cayce Reese, marketing and business development coordinator for Oconee State Bank, on community storytelling, financial honesty and how local banks stay competitive in a digital age.",
-    image: cayceHero,
-    caption: "Cayce Reese, marketing and business development coordinator for Oconee State Bank. (Photo/David McFarland)",
     tags: ["Business", "Oconee State Bank", "Banking", "Storytelling"],
-    why: "I picked community banking thinking it would be a stretch story for a sophomore. It turned out to be the easiest interview I had all semester because Cayce Reese answers questions in pull quotes. The Q&A format was new for me and harder than it looks, since cutting her down without making her sound like a different person took more passes than I expected. The story sits on my business beat, and Reese gave me a real window into how a community bank thinks about storytelling and customer trust.",
   },
   {
-    title: "Photo: \u201CICE Out of Athens\u201D rally",
+    title: "Photo: “ICE Out of Athens” rally",
     publication: "Reporting I, Grady College",
     date: "January 2026",
-    image: cutline,
     summary: "Created a cutline on ICE protests.",
-    caption: "University of Georgia students rally against U.S. Immigration and Customs Enforcement at the Tate Student Center on Friday, Jan. 30, 2026. Protesters call for action to remove the agency from Athens. (Photo/Grace Park)",
     tags: ["ICE", "Protest", "UGA", "Athens"],
-    why: "Covering a rally on my own campus meant being a student and a reporter at the same time. Once I started taking photos I had to switch into reporting mode quickly, asking names and checking spellings while people kept moving. The photo and cutline format was harder than writing a full story because the caption is the only place to put the reporting. Names, date, where it happened, why it happened, all in three sentences. I rewrote the cutline more times than I want to admit before I posted it.",
   },
   {
     title: "Section Editor: Fashion & Beauty",
@@ -95,7 +67,6 @@ const journalism = [
     href: "/work/infusion",
     summary: "Edited the Fashion and Beauty vertical for Infusion Magazine's fall 2025 issue. Led content strategy, edited drafts and shaped the section's voice.",
     tags: ["Editing", "Fashion and Beauty", "Student Media", "Infusion Magazine"],
-    why: "Editing other students\u2019 work taught me things reporting alone could not. I had to assign pieces I would not have written myself, including a story on colorism in the South Asian community and a feature on defiant fashion, and figure out how to line-edit them without flattening the writer\u2019s voice. Sitting on the editorial board also meant arguing for the section in front of the rest of the staff, which is the part I was most nervous about and the part I learned the most from.",
   },
 ];
 
@@ -134,18 +105,6 @@ const sections = [
                 <span class="date">{p.date}</span>
               </div>
               <div class="title">{p.title}</div>
-              {p.image && (
-                <figure class={p.portrait ? "photo-figure photo-figure--portrait" : "photo-figure"}>
-                  <Image
-                    src={p.image}
-                    alt={p.caption || p.title}
-                    widths={[600, 900, 1200]}
-                    sizes="(max-width: 720px) 100vw, 900px"
-                    class="photo"
-                  />
-                  {p.caption && <figcaption>{p.caption}</figcaption>}
-                </figure>
-              )}
               <p class="summary">{p.summary}</p>
               {p.tags && (
                 <ul class="tags">
@@ -160,11 +119,6 @@ const sections = [
                 <a {...linkProps} class="piece">{Inner}</a>
               ) : (
                 <div class="piece piece--static">{Inner}</div>
-              )}
-              {p.why && (
-                <p class="why">
-                  <span class="why-label">Why I Wrote The Story</span> {p.why}
-                </p>
               )}
             </li>
           );
@@ -234,35 +188,10 @@ const sections = [
     margin: 0 0 0.75rem;
   }
 
-  .piece :global(.photo-figure) {
-    margin: 0 auto 1rem;
-    max-width: 900px;
-  }
-
-  .piece :global(.photo-figure--portrait) {
-    max-width: 380px;
-  }
-
-  .piece :global(.photo) {
-    display: block;
-    width: 100%;
-    max-width: 900px;
-    height: auto;
-    border: 1px solid var(--rule);
-  }
-
-  .piece :global(.photo-figure figcaption) {
-    margin-top: 0.6rem;
-    font-size: 0.9rem;
-    color: var(--muted);
-    font-style: italic;
-    line-height: 1.5;
-  }
-
   .tags {
     list-style: none;
     padding: 0;
-    margin: 0 0 0.25rem;
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;
@@ -277,17 +206,5 @@ const sections = [
     letter-spacing: 0.06em;
     color: var(--muted);
     background: transparent;
-  }
-
-  .why {
-    margin: 0;
-    padding: 0 0 1.5rem;
-    color: var(--muted);
-    line-height: 1.6;
-  }
-
-  .why-label {
-    font-style: italic;
-    color: var(--ink);
   }
 </style>
