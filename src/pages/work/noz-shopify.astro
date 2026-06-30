@@ -1,0 +1,445 @@
+---
+import Base from "../../layouts/Base.astro";
+import { Image } from "astro:assets";
+import nozHero from "../../assets/work/noz/noz-hero.jpg";
+import nozProduct from "../../assets/work/noz/noz-product.png";
+
+const tags = ["Digital Marketing", "Shopify", "SEO", "Copywriting", "Brand Strategy", "CRO"];
+
+const palette = [
+  { hex: "#FFFEF4", name: "Cream background" },
+  { hex: "#081411", name: "Near-black text" },
+  { hex: "#D8453F", name: "Red buttons" },
+];
+
+const keywords = [
+  "reef safe sunscreen",
+  "zinc oxide sunscreen",
+  "biodegradable sunscreen",
+  "eco-friendly sunscreen",
+  "best sunscreen for nose",
+];
+---
+
+<Base
+  title="Nöz: Building and Marketing a Shopify Store | Grace Joy Park"
+  description="Grace Joy Park's digital marketing case study: building and marketing a Shopify storefront for Nöz, a simulated reef-safe SPF brand, through the Global Career Accelerator."
+>
+  <p class="back"><a href="/work">&larr; Back to Work</a></p>
+
+  <article class="post">
+    <h1>Nöz: Building and Marketing a Shopify Store</h1>
+    <p class="meta muted">The Global Career Accelerator &middot; June 2026 &middot; Digital Marketing</p>
+
+    <ul class="tags">
+      {tags.map((t) => <li>{t}</li>)}
+    </ul>
+
+    <p class="note">
+      Nöz is a simulated brand used for training in the Global Career Accelerator&rsquo;s
+      digital marketing program. The store is a project build, not a commercial site, so
+      anything below describes my work rather than real sales.
+    </p>
+
+    <figure class="store-preview">
+      <div class="sp-frame">
+        <div class="sp-banner">Free shipping on all orders over $25. Use code NOZSHIP at checkout.</div>
+        <div
+          class="sp-hero"
+          style={`background-image: linear-gradient(rgba(20,23,20,0.45), rgba(20,23,20,0.55)), url(${nozHero.src});`}
+        >
+          <div class="sp-wordmark">N&Ouml;Z</div>
+          <p class="sp-subcopy">
+            Our neon reef-safe SPF shades are going quick this summer. Grab yours before
+            they sell out and get free shipping on orders over $25.
+          </p>
+          <p class="sp-headline">Your shade is selling fast.</p>
+          <span class="sp-cta">PICK YOUR SHADE</span>
+        </div>
+      </div>
+      <figcaption>
+        The Nöz storefront hero I designed in Shopify, using the store&rsquo;s own photo,
+        copy and color palette. (Store build/Grace Park)
+      </figcaption>
+    </figure>
+
+    <div class="prose">
+      <p class="lede">
+        I built and marketed a Shopify storefront end to end for Nöz, a reef-safe, vegan
+        SPF nose stick that comes in neon colors. I owned the brand positioning, site copy,
+        visual choices, SEO and conversion strategy, and used the store to practice every
+        stage of a digital marketing build.
+      </p>
+
+      <h2>The customer</h2>
+      <p>
+        I designed the store around Frances the Fashionista, the target persona from the
+        Nöz brand guidelines. Frances is a fashion-forward Gen Z shopper who cares about
+        self-expression, ethical products and easy sun protection. I let her priorities
+        guide the copy, visuals and product positioning, so the site sells Nöz as both sun
+        protection and a style statement.
+      </p>
+
+      <h2>Value proposition</h2>
+      <p>
+        Nöz is a reef-safe, vegan SPF nose stick in neon colors, made for shoppers like
+        Frances who want their sun protection to be as bold, expressive and ethical as the
+        rest of their look. I placed the value proposition in three spots so shoppers
+        understand Nöz before they have to search. The hero creates urgency, a custom HTML
+        block explains that the sunscreen is reef-safe, vegan and cruelty-free, and the
+        featured product lets them pick a neon shade right away.
+      </p>
+
+      <h2>Brand visuals</h2>
+      <p>
+        I chose a cream background, near-black text and red buttons. The neutral cream keeps
+        the site bright and lets the neon product colors stand out, the red feels energetic
+        and playful, and the near-black text stays easy to read.
+      </p>
+      <ul class="swatches">
+        {palette.map((c) => (
+          <li>
+            <span class="chip" style={`background:${c.hex}`}></span>
+            <span class="chip-label">{c.name}<br /><code>{c.hex}</code></span>
+          </li>
+        ))}
+      </ul>
+      <p>
+        For the hero photo I picked an image of a model wearing a neon SPF stripe on her
+        nose, so Nöz reads as bold, expressive sun protection instead of plain skincare.
+      </p>
+      <figure class="product-figure">
+        <Image
+          src={nozProduct}
+          alt="The Nöz reef-safe SPF nose stick"
+          widths={[400, 700, 1080]}
+          sizes="(max-width: 720px) 70vw, 360px"
+          format="webp"
+        />
+        <figcaption>The Nöz product, a reef-safe SPF nose stick. (Product image/Nöz brand assets)</figcaption>
+      </figure>
+
+      <h2>SEO</h2>
+      <p>
+        I ran keyword research in Semrush and Google Trends, then built the homepage meta
+        title around terms that balance search volume with easier-to-rank phrases. They
+        match Nöz&rsquo;s reef-safe, mineral and eco-friendly positioning while reaching
+        shoppers with commercial intent.
+      </p>
+      <ul class="keywords">
+        {keywords.map((k) => <li>{k}</li>)}
+      </ul>
+
+      <h2>Conversion</h2>
+      <p>
+        On the landing page I focused on a handful of conversion strategies:
+      </p>
+      <ul class="cro">
+        <li><strong>Clear CTA.</strong> The hero button reads &ldquo;PICK YOUR SHADE,&rdquo; so shoppers know the action to take.</li>
+        <li><strong>Color contrast.</strong> The red CTA stands out against the darker hero image and cream background.</li>
+        <li><strong>Trust badges.</strong> The product page uses eco-friendly, reef-friendly and vegan badges to reassure shoppers.</li>
+        <li><strong>Whitespace.</strong> The homepage separates the hero, brand copy and featured product so the page is easy to scan.</li>
+      </ul>
+      <p>
+        I also set up A/B testing and built branded email flows in Shopify, including
+        promotional, abandoned-checkout and transactional sends.
+      </p>
+    </div>
+
+    <section class="walkthrough-section">
+      <h2>Store Walkthrough</h2>
+      <div class="loom-wrap">
+        <iframe
+          src="https://www.loom.com/embed/d80ed8fe941248adb396409fd9e0cb7a"
+          title="Nöz store walkthrough"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <p class="loom-link">
+        <a href="https://www.loom.com/share/d80ed8fe941248adb396409fd9e0cb7a" target="_blank" rel="noopener noreferrer">
+          Watch the walkthrough on Loom &rarr;
+        </a>
+      </p>
+    </section>
+
+    <section class="walkthrough-section">
+      <h2>Store walkthrough</h2>
+      <figure class="video-figure">
+        <video controls preload="metadata" playsinline>
+          <source src="/work/noz-walkthrough.mp4" type="video/mp4" />
+          Your browser does not support inline video.
+          <a href="/work/noz-walkthrough.mp4" target="_blank" rel="noopener noreferrer">Download the walkthrough</a>.
+        </video>
+        <figcaption>A screen recording walking through the Nöz store I built. (Video/Grace Park)</figcaption>
+      </figure>
+    </section>
+
+    <section class="why-section">
+      <h2>What I Learned</h2>
+      <p>
+        The project taught me how to present one product as both a protective SPF and a
+        fashion accessory, and how to keep a brand voice bold, playful and direct across a
+        whole site. Building the store end to end meant the persona, the copy, the visuals,
+        the SEO and the conversion choices all had to point the same direction, and seeing
+        them line up is what made the work click.
+      </p>
+    </section>
+  </article>
+</Base>
+
+<style>
+  .back { margin-bottom: 1rem; font-size: 0.95rem; }
+
+  .post h1 {
+    margin-bottom: 0.6rem;
+    line-height: 1.25;
+  }
+
+  .meta {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 1rem;
+  }
+
+  .tags {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .tags li {
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 0.15rem 0.7rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+  }
+
+  .note {
+    border-left: 3px solid var(--accent);
+    padding: 0.25rem 0 0.25rem 1rem;
+    margin: 0 0 2rem;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .store-preview {
+    margin: 0 0 2rem;
+  }
+
+  .sp-frame {
+    border: 1px solid var(--rule);
+    overflow: hidden;
+    border-radius: 4px;
+  }
+
+  .sp-banner {
+    background: #3f5170;
+    color: #fff;
+    text-align: center;
+    font-size: 0.85rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .sp-hero {
+    background-color: #20231c;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 3.5rem 1.5rem 4rem;
+  }
+
+  .sp-wordmark {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 0.15em;
+    margin-bottom: 1.5rem;
+  }
+
+  .sp-subcopy {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.78rem;
+    line-height: 1.7;
+    max-width: 36rem;
+    margin: 0 auto 1.25rem;
+    color: rgba(255, 255, 255, 0.92);
+  }
+
+  .sp-headline {
+    font-size: 2.6rem;
+    line-height: 1.1;
+    margin: 0 0 1.5rem;
+  }
+
+  .sp-cta {
+    display: inline-block;
+    background: #d8453f;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.85rem;
+    padding: 0.85rem 1.75rem;
+  }
+
+  .store-preview figcaption {
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+    font-style: italic;
+    line-height: 1.5;
+  }
+
+  .walkthrough-section {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  .walkthrough-section h2 {
+    margin-bottom: 1.25rem;
+    font-size: 1.2rem;
+  }
+
+  .video-figure {
+    margin: 0;
+  }
+
+  .video-figure video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid var(--rule);
+    background: #000;
+  }
+
+  .video-figure figcaption {
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+    font-style: italic;
+    line-height: 1.5;
+  }
+
+  .prose p {
+    line-height: 1.7;
+    margin: 0 0 1rem;
+  }
+
+  .prose .lede {
+    font-size: 1.1rem;
+  }
+
+  .prose h2 {
+    margin: 2rem 0 0.75rem;
+    font-size: 1.2rem;
+  }
+
+  .swatches {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+
+  .swatches li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .chip {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    display: block;
+    flex-shrink: 0;
+  }
+
+  .chip-label {
+    font-size: 0.85rem;
+    color: var(--muted);
+    line-height: 1.4;
+  }
+
+  .chip-label code {
+    font-size: 0.8rem;
+  }
+
+  .product-figure {
+    margin: 0 auto 1.5rem;
+    max-width: 360px;
+    text-align: center;
+  }
+
+  .product-figure :global(img) {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid var(--rule);
+  }
+
+  .product-figure figcaption {
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+    font-style: italic;
+    line-height: 1.5;
+  }
+
+  .keywords {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .keywords li {
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 0.2rem 0.8rem;
+    font-size: 0.85rem;
+    background: #f3efe6;
+  }
+
+  .cro {
+    margin: 0 0 1rem;
+    padding-left: 1.25rem;
+  }
+
+  .cro li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+
+  .why-section {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  .why-section h2 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .why-section p {
+    margin: 0;
+    line-height: 1.6;
+  }
+</style>

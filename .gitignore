@@ -26,3 +26,4 @@ pnpm-debug.log*
 # Claude local state (not part of the project)
 .claude/scheduled_tasks.lock
 
+.claude/worktrees/

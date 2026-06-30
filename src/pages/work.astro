@@ -6,8 +6,22 @@ import twilightHero from "../assets/work/articles/twilight-banner.jpg";
 import sclptHero from "../assets/work/articles/sclpt-reformers.jpg";
 import dataCenterHero from "../assets/work/articles/data-center.jpg";
 import cayceHero from "../assets/work/articles/cayce-reese.jpg";
+import nozHero from "../assets/work/noz/noz-hero.jpg";
 
-const pieces = [
+const advertising = [
+  {
+    title: "Nöz: Building and Marketing a Shopify Store",
+    publication: "The Global Career Accelerator",
+    date: "June 2026",
+    href: "/work/noz-shopify",
+    summary: "Built and marketed a Shopify storefront end to end for Nöz, a simulated reef-safe SPF brand, covering brand strategy, copy, SEO and conversion optimization.",
+    image: nozHero,
+    caption: "The Nöz storefront I built in Shopify for the Global Career Accelerator. (Store build/Grace Park)",
+    tags: ["Digital Marketing", "Shopify", "SEO", "Copywriting", "Brand Strategy"],
+  },
+];
+
+const journalism = [
   {
     title: "Former racer returns to Athens Orthopedic Clinic Twilight Criterium as vendors prepares for race weekend",
     publication: "Reporting I, Grady College",
@@ -72,68 +86,98 @@ const pieces = [
     why: "Editing other students\u2019 work taught me things reporting alone could not. I had to assign pieces I would not have written myself, including a story on colorism in the South Asian community and a feature on defiant fashion, and figure out how to line-edit them without flattening the writer\u2019s voice. Sitting on the editorial board also meant arguing for the section in front of the rest of the staff, which is the part I was most nervous about and the part I learned the most from.",
   },
 ];
+
+const sections = [
+  {
+    heading: "Advertising and Digital Marketing",
+    blurb: "Brand, copy and digital marketing projects.",
+    items: advertising,
+  },
+  {
+    heading: "Journalism and Reporting",
+    blurb: "Reporting, photography and editing from Grady College.",
+    items: journalism,
+  },
+];
 ---
 
 <Base title="Work | Grace Joy Park">
   <h1>Work</h1>
-  <p class="muted lead">Selected journalism, photography and writing.</p>
+  <p class="muted lead">Advertising, digital marketing and journalism.</p>
 
-  <ul class="pieces">
-    {pieces.map((p) => {
-      const isInternal = p.href && p.href.startsWith("/");
-      const linkProps = p.href
-        ? (isInternal
+  {sections.map((section) => (
+    <section class="work-section">
+      <h2>{section.heading}</h2>
+      {section.blurb && <p class="section-blurb muted">{section.blurb}</p>}
+      <ul class="pieces">
+        {section.items.map((p) => {
+          const linkProps = p.href
             ? { href: p.href, target: "_blank", rel: "noopener noreferrer" }
-            : { href: p.href, target: "_blank", rel: "noopener noreferrer" })
-        : null;
-      const Inner = (
-        <>
-          <div class="meta">
-            <span class="pub">{p.publication}</span>
-            <span class="dot">·</span>
-            <span class="date">{p.date}</span>
-          </div>
-          <div class="title">{p.title}</div>
-          {p.image && (
-            <figure class="photo-figure">
-              <Image
-                src={p.image}
-                alt={p.caption || p.title}
-                widths={[600, 900, 1200]}
-                sizes="(max-width: 720px) 100vw, 900px"
-                class="photo"
-              />
-              {p.caption && <figcaption>{p.caption}</figcaption>}
-            </figure>
-          )}
-          <p class="summary">{p.summary}</p>
-          {p.tags && (
-            <ul class="tags">
-              {p.tags.map((t) => <li>{t}</li>)}
-            </ul>
-          )}
-        </>
-      );
-      return (
-        <li>
-          {linkProps ? (
-            <a {...linkProps} class="piece">{Inner}</a>
-          ) : (
-            <div class="piece piece--static">{Inner}</div>
-          )}
-          {p.why && (
-            <p class="why">
-              <span class="why-label">Why I Wrote The Story</span> {p.why}
-            </p>
-          )}
-        </li>
-      );
-    })}
-  </ul>
+            : null;
+          const Inner = (
+            <>
+              <div class="meta">
+                <span class="pub">{p.publication}</span>
+                <span class="dot">·</span>
+                <span class="date">{p.date}</span>
+              </div>
+              <div class="title">{p.title}</div>
+              {p.image && (
+                <figure class="photo-figure">
+                  <Image
+                    src={p.image}
+                    alt={p.caption || p.title}
+                    widths={[600, 900, 1200]}
+                    sizes="(max-width: 720px) 100vw, 900px"
+                    class="photo"
+                  />
+                  {p.caption && <figcaption>{p.caption}</figcaption>}
+                </figure>
+              )}
+              <p class="summary">{p.summary}</p>
+              {p.tags && (
+                <ul class="tags">
+                  {p.tags.map((t) => <li>{t}</li>)}
+                </ul>
+              )}
+            </>
+          );
+          return (
+            <li>
+              {linkProps ? (
+                <a {...linkProps} class="piece">{Inner}</a>
+              ) : (
+                <div class="piece piece--static">{Inner}</div>
+              )}
+              {p.why && (
+                <p class="why">
+                  <span class="why-label">Why I Wrote The Story</span> {p.why}
+                </p>
+              )}
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  ))}
 </Base>
 
 <style>
   .lead { margin-bottom: 2.5rem; }
+
+  .work-section { margin-bottom: 3.5rem; }
+  .work-section:last-child { margin-bottom: 0; }
+
+  .work-section h2 {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 0.3rem;
+  }
+
+  .section-blurb {
+    margin: 0 0 1.25rem;
+    font-size: 0.95rem;
+  }
 
   .pieces {
     list-style: none;
