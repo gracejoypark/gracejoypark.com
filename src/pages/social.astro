@@ -3,7 +3,6 @@ import Base from "../layouts/Base.astro";
 
 const instagramPosts = [
   "https://www.instagram.com/p/DXKTjK-RaCf/",
-  "https://www.instagram.com/p/DXcYo5viZgU/",
   "https://www.instagram.com/p/DXuZu4wkfwi/",
 ];
 ---
@@ -27,7 +26,7 @@ const instagramPosts = [
 <style>
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 420px));
     gap: 1.5rem;
     align-items: start;
   }

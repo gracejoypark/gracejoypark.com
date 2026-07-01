@@ -3,32 +3,31 @@ import Base from "../layouts/Base.astro";
 
 const experience = [
   {
-    org: "Devon Review",
-    location: "Remote",
-    role: "Copywriting Intern",
-    dates: "June 2026 – Present",
-    bullets: [
-      "Write and revise short-form marketing and brand copy as part of the editorial team.",
-    ],
-  },
-  {
     org: "The Global Career Accelerator",
     location: "Remote",
     role: "Digital Marketing Intern",
     dates: "May 2026 – Present",
     bullets: [
-      "Built a Shopify storefront end to end, including site structure, navigation and on-brand copy, photography and typography aligned to brand guidelines.",
-      "Conducted keyword research in Semrush and Google Trends to build an SEO strategy, then optimized metadata and wrote blog content around target keywords.",
-      "Created a customer empathy map from target personas to guide user-centered website design.",
-      "Ran A/B tests and applied landing-page best practices, including trust badges, a header CTA and product reviews, to optimize the homepage for conversions.",
-      "Built branded email flows in Shopify covering promotional, abandoned-checkout and transactional sends.",
+      "Built a Shopify storefront for a mock direct-to-consumer brand, setting up the theme, navigation, brand voice and product copy from brand guidelines.",
+      "Ran a competitor content analysis, defined three Instagram content pillars and wrote platform-specific community management responses.",
+      "Ran A/B tests and SEO keyword research to optimize product pages and metadata.",
+      "Collaborated in weekly agency-style team labs, developing customer-acquisition and brand strategy for real-world case-study brands.",
+    ],
+  },
+  {
+    org: "Devon Review",
+    location: "Remote",
+    role: "Copywriting Intern",
+    dates: "June 2026 – Present",
+    bullets: [
+      "Copywriting intern on the editorial team.",
     ],
   },
   {
     org: "Infusion Magazine",
     location: "Athens, Ga.",
     role: "News Director, Executive Board",
-    dates: "May 2026 – Present",
+    dates: "Incoming, Aug. 2026",
     bullets: [
       "Selected to the executive board to lead news coverage strategy and direct staff writers across the publication.",
     ],
@@ -37,43 +36,20 @@ const experience = [
     org: "Infusion Magazine",
     location: "Athens, Ga.",
     role: "Section Editor, Fashion and Beauty",
-    dates: "Oct. 2025 – Present",
+    dates: "Oct. 2025 – Aug. 2026",
     bullets: [
       "Led the Fashion and Beauty vertical for Vol. 23, Issue 1, overseeing content strategy and writer assignments.",
-      "Edited two major drafts per issue to ensure 100 percent adherence to AP Style and brand voice.",
-      "Collaborated with the editorial board to curate content aligned with the issue's themes of social awareness and digital culture.",
+      "Edited two major drafts per issue to ensure adherence to AP Style and brand voice.",
     ],
   },
   {
     org: "University of Georgia Main Library",
     location: "Athens, Ga.",
     role: "Library Shelving Assistant",
-    dates: "Sep. 2025 – Present",
+    dates: "Oct. 2025 – Present",
     bullets: [
       "Shelved and organized more than 1,000 books and folios using the Library of Congress Classification system.",
       "Maintained stack-area orderliness through regular shelf-reading and shifting collections to optimize shelf space.",
-    ],
-  },
-  {
-    org: "Bruster's Real Ice Cream",
-    location: "Cumming, Ga.",
-    role: "Dessert Bar Attendant",
-    dates: "May 2025 – July 2025",
-    bullets: [
-      "Delivered friendly, efficient customer service in a high-volume summer environment.",
-      "Maintained organized workstations and adhered to food safety standards.",
-      "Coordinated with coworkers and management to keep orders moving during peak hours.",
-    ],
-  },
-  {
-    org: "Cumming Aquatic Center",
-    location: "Cumming, Ga.",
-    role: "Lifeguard and Swimming Instructor",
-    dates: "Oct. 2022 – July 2023",
-    bullets: [
-      "Taught swim lessons to children and teens, improving technique, safety and water confidence.",
-      "Managed multiple classes and lifeguard responsibilities in a fast-paced environment.",
-      "CPR and First Aid certified.",
     ],
   },
 ];
@@ -89,21 +65,21 @@ const projects = [
     ],
   },
   {
-    title: "Athens Twilight Criterium Race Weekend Preview",
-    org: "Reporting I, Grady College",
+    title: "Former Racer Returns to Athens Twilight",
+    org: "Grady Newsource",
     dates: "April 2026",
-    href: "/work/twilight",
+    href: "https://gradynewsource.uga.edu/live-blog-take-a-ride-with-athens-twilight-cycling-race/",
     bullets: [
-      "Field-reported a downtown event preview, conducting on-camera interviews with vendors, musicians and a former racer to build a scene-driven story.",
+      "Reported a bylined event preview, interviewing a former Twilight racer scouting the downtown course with UGA Cycling the day before the pro races.",
     ],
   },
   {
-    title: "SCLPT Studio Brings Boutique Wellness to Athens",
-    org: "Reporting I, Grady College",
-    dates: "March 2026",
-    href: "/work/sclpt-studio",
+    title: "Personal Portfolio Site",
+    org: "Self-directed",
+    dates: "Spring 2026",
+    href: "https://gracejoypark.com",
     bullets: [
-      "Profiled a women-owned fitness studio, conducting a joint interview with both co-founders and balancing business and mission threads in a single feature.",
+      "Designed, copywrote and shipped a personal portfolio site, building it in Astro with Claude as a coding partner, deploying via GitHub to Cloudflare Pages and configuring a custom domain and email routing.",
     ],
   },
 ];
@@ -132,7 +108,7 @@ const projects = [
       </div>
       <ul>
         <li>Certificate in News Literacy and New Media</li>
-        <li>GPA: 3.76 / 4.00, Georgia HOPE Scholarship</li>
+        <li>GPA: 3.77 / 4.00, Georgia HOPE Scholarship</li>
         <li>Relevant coursework: Media, News and Consumers (JOUR 3030), Reporting I, Law of Mass Communication</li>
       </ul>
     </div>
@@ -184,10 +160,10 @@ const projects = [
   <section>
     <h2>Skills</h2>
     <ul class="skills-list">
-      <li><strong>Digital Marketing:</strong> SEO and keyword research (Semrush, Google Trends), Shopify, A/B testing, email marketing, conversion optimization</li>
-      <li><strong>Copywriting and Editorial:</strong> Copywriting, AP Style, copyediting, content strategy, brand voice</li>
-      <li><strong>Design and Media:</strong> Canva, CapCut, photography, Instagram Reels</li>
-      <li><strong>Productivity:</strong> Google Workspace (Docs, Sheets, Slides)</li>
+      <li><strong>Editorial:</strong> AP Style, copyediting, content strategy</li>
+      <li><strong>Digital Marketing:</strong> Shopify, Meta Ads, SEO (Semrush, Google Trends), A/B testing, email marketing, social media strategy</li>
+      <li><strong>Design and Media:</strong> Canva, CapCut, Instagram Reels</li>
+      <li><strong>Productivity:</strong> Google Drive (Docs, Sheets, Slides)</li>
     </ul>
   </section>
 
