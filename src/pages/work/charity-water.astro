@@ -1,0 +1,344 @@
+---
+import Base from "../../layouts/Base.astro";
+
+const tags = ["Campaign Strategy", "Paid Social", "Influencer Marketing", "Customer Acquisition", "Social Media"];
+
+const pillars = [
+  {
+    name: "Proof of Impact",
+    body: "Field stories, photos and the 100% model that show exactly where every dollar goes.",
+  },
+  {
+    name: "The Current on Campus",
+    body: "Student voices and simple ways to start or join the movement at your school.",
+  },
+  {
+    name: "Water, Explained",
+    body: "Quick, shareable facts on the global water crisis and why it matters to your generation.",
+  },
+];
+
+const posts = [
+  {
+    pillar: "Proof of Impact",
+    caption:
+      "Ever wonder where your donation actually goes? With The Current, 100% of your gift funds a clean water project, and we show you the proof. Start giving $1 a month, link in bio. #charitywater",
+  },
+  {
+    pillar: "The Current on Campus",
+    caption:
+      "Clean water, powered by students like you. The Current is a $1-a-month movement you can bring to your own campus. Tap the link in bio to join. #charitywater",
+  },
+  {
+    pillar: "Water, Explained",
+    caption:
+      "696 million people still live without clean water. The good news: change can cost as little as $1 a month. Learn the facts and join The Current, link in bio. #charitywater",
+  },
+];
+
+const criteria = [
+  "Reaches the audience: a mostly US, Gen Z college following, ideally at activism-minded campuses.",
+  "Fits the cause: posts about activism, sustainability, nonprofits or campus life, so clean water feels natural, not random.",
+  "Authentic and engaged: a micro-influencer with roughly 10,000 to 100,000 followers, high engagement and real values, so the $1-a-month ask reads as a genuine recommendation rather than an ad.",
+];
+
+const ideas = [
+  "A Walk for Water on the quad, where students carry jerry cans the distance many kids walk each day for water, then sign up for The Current right after.",
+  "A pop-up refill and clean-water tasting station at club fairs and orientation, staffed by student ambassadors who explain the $1-a-month program.",
+  "A $1 Challenge with student orgs and Greek life, where chapters compete to recruit the most monthly givers to The Current.",
+];
+---
+
+<Base
+  title="charity: water: Activating the Next Generation of Supporters | Grace Joy Park"
+  description="Grace Joy Park's customer-acquisition case study: a $1-a-month student donation campaign for charity: water, built through the Global Career Accelerator across organic social, influencer, paid social and campus activation."
+>
+  <p class="back"><a href="/work">&larr; Back to Work</a></p>
+
+  <article class="post">
+    <h1>charity: water: Activating the Next Generation of Supporters</h1>
+    <p class="meta muted">The Global Career Accelerator &middot; July 2026 &middot; Digital Marketing</p>
+
+    <ul class="tags">
+      {tags.map((t) => <li>{t}</li>)}
+    </ul>
+
+    <div class="prose">
+      <p class="lede">
+        I built a customer-acquisition campaign to bring college students into charity:
+        water as recurring donors. charity: water is a real nonprofit, but this was a
+        capstone I developed through the Global Career Accelerator, not a live initiative
+        for the organization. I owned the positioning and the full funnel, from organic
+        social and influencer strategy to paid social and a campus ambassador program.
+      </p>
+
+      <h2>The positioning</h2>
+      <p>
+        charity: water&rsquo;s recurring program, The Spring, asks for an open-ended monthly
+        gift, which feels out of reach on a student budget. I built the campaign around The
+        Current, a $1-a-month program tied to a student-led movement, so giving reads as
+        affordable, social and made for the activism-minded college audience I was trying to
+        reach. That reframing sits at the top of the landing page and carries through every
+        channel below.
+      </p>
+
+      <h2>Organic social</h2>
+      <p>
+        I built the Instagram presence at <strong>@jointhecurrent</strong> around three
+        content pillars, each aimed at a different reason a student might give:
+      </p>
+      <ul class="pillars-grid">
+        {pillars.map((p) => (
+          <li class="pillar">
+            <span class="pillar-name">{p.name}</span>
+            <p>{p.body}</p>
+          </li>
+        ))}
+      </ul>
+      <p>
+        Then I wrote a post for each pillar, keeping the copy short, hopeful and built around
+        the $1-a-month ask:
+      </p>
+      <ul class="posts-grid">
+        {posts.map((p) => (
+          <li class="post-card">
+            <span class="post-pillar">{p.pillar}</span>
+            <p>{p.caption}</p>
+          </li>
+        ))}
+      </ul>
+
+      <h2>Influencer marketing</h2>
+      <p>
+        For influencer work I wrote the content guidelines first: a short, personal TikTok
+        about why the creator gives to clean water, ending with an invite to join The Current
+        for $1 a month. Each post had to show the creator on camera, real charity: water
+        project footage, the $1-a-month ask and the @jointhecurrent handle on screen, in a
+        tone that stays hopeful and genuine and focuses on the good a dollar can do. I then
+        set the criteria I used to pick creators:
+      </p>
+      <ul class="criteria">
+        {criteria.map((c) => <li>{c}</li>)}
+      </ul>
+
+      <h2>Paid social</h2>
+      <p>
+        On the paid side I built an interest-based audience to introduce The Current to
+        college students who do not know it yet and drive first-time sign-ups.
+      </p>
+      <div class="kpi">
+        <div class="kpi-row"><span class="kpi-label">Objective</span><span>First-time $1-a-month sign-ups from a cold college audience</span></div>
+        <div class="kpi-row"><span class="kpi-label">KPI</span><span>New $1-a-month sign-ups, working toward a goal of 2,000 student donors</span></div>
+        <div class="kpi-row"><span class="kpi-label">Efficiency metric</span><span>Cost per sign-up, or total ad spend divided by new $1-a-month donors</span></div>
+      </div>
+      <p>
+        To make the spend work harder, I paired that with a retargeting audience of people
+        who visited the landing page or engaged with a post but did not sign up. They already
+        showed interest, so a simple reminder of the $1-a-month ask and the 100% model gives
+        them a low-pressure reason to finish. Because they are already warm and cost little to
+        reach again, they are the audience most likely to convert.
+      </p>
+
+      <h2>Campus activation</h2>
+      <p>
+        The last piece was a student ambassador program, modeled on how brands like Red Bull
+        and Amazon Prime Student win students early and keep them for years. I proposed three
+        on-campus activations to turn attention into sign-ups:
+      </p>
+      <ul class="ideas">
+        {ideas.map((i) => <li>{i}</li>)}
+      </ul>
+    </div>
+
+    <section class="why-section">
+      <h2>What I Learned</h2>
+      <p>
+        Building the campaign end to end taught me how a single idea, a $1-a-month gift, can
+        hold a whole funnel together when the organic posts, the influencer brief, the paid
+        targeting and the campus events all repeat it in their own way. The hardest and most
+        useful part was writing for a specific audience: everything had to sound affordable and
+        student-led, because that reframing was the entire reason the campaign could work.
+      </p>
+    </section>
+  </article>
+</Base>
+
+<style>
+  .back { margin-bottom: 1rem; font-size: 0.95rem; }
+
+  .post h1 {
+    margin-bottom: 0.6rem;
+    line-height: 1.25;
+  }
+
+  .meta {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 1rem;
+  }
+
+  .tags {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .tags li {
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 0.15rem 0.7rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+  }
+
+  .prose p {
+    line-height: 1.7;
+    margin: 0 0 1rem;
+  }
+
+  .prose .lede {
+    font-size: 1.1rem;
+  }
+
+  .prose h2 {
+    margin: 2rem 0 0.75rem;
+    font-size: 1.2rem;
+  }
+
+  .pillars-grid {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .pillar {
+    border: 1px solid var(--rule);
+    border-top: 3px solid #ffc907;
+    border-radius: 4px;
+    padding: 1rem;
+  }
+
+  .pillar-name {
+    display: block;
+    font-style: italic;
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .pillar p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .posts-grid {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .post-card {
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 1rem;
+    background: #f3efe6;
+  }
+
+  .post-pillar {
+    display: block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .post-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .criteria,
+  .ideas {
+    margin: 0 0 1rem;
+    padding-left: 1.25rem;
+  }
+
+  .criteria li,
+  .ideas li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+
+  .kpi {
+    border: 1px solid var(--rule);
+    border-left: 3px solid #ffc907;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    margin: 0 0 1rem;
+  }
+
+  .kpi-row {
+    display: flex;
+    gap: 1rem;
+    padding: 0.6rem 0;
+    line-height: 1.6;
+  }
+
+  .kpi-row + .kpi-row {
+    border-top: 1px solid var(--rule);
+  }
+
+  .kpi-label {
+    flex: 0 0 9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.8rem;
+    color: var(--muted);
+    padding-top: 0.15rem;
+  }
+
+  .why-section {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  .why-section h2 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .why-section p {
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 640px) {
+    .pillars-grid,
+    .posts-grid {
+      grid-template-columns: 1fr;
+    }
+    .kpi-row {
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+    .kpi-label {
+      flex-basis: auto;
+    }
+  }
+</style>
